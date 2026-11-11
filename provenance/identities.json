@@ -1,0 +1,188 @@
+[
+  {
+    "driver": "tektronix.afg31000",
+    "hints": [
+      {
+        "evidence": "identity-hint-only",
+        "hardwareValidated": false,
+        "kinds": [
+          "FunctionGenerator"
+        ],
+        "legacyResolution": {
+          "FunctionGenerator": {
+            "commandKeys": [
+              "burst_count",
+              "burst_state",
+              "burst_trigger",
+              "output_enable",
+              "set_amplitude",
+              "set_duty_cycle",
+              "set_frequency",
+              "set_load",
+              "set_offset",
+              "set_waveform"
+            ],
+            "hardwareValidated": false,
+            "implicitFallbackMustBecomeExplicit": true,
+            "profile": "generic_fgen"
+          }
+        },
+        "manufacturer": "Tektronix",
+        "migration": "required",
+        "model": "AFG31000",
+        "repository": "instrument-components-tektronix"
+      }
+    ],
+    "kinds": [
+      "FunctionGenerator"
+    ],
+    "defaultChannels": "legacy supported-ID hints, not physical completeness",
+    "defaultOutputs": "unknown",
+    "temperatureUnit": "Unknown",
+    "hardwareValidated": false,
+    "shutdownSteps": []
+  },
+  {
+    "driver": "tektronix.fca3100",
+    "hints": [
+      {
+        "evidence": "identity-hint-only",
+        "hardwareValidated": false,
+        "kinds": [
+          "Counter"
+        ],
+        "legacyResolution": {
+          "Counter": {
+            "commandKeys": [
+              "channel_select",
+              "gate_time",
+              "measure_frequency",
+              "measure_period",
+              "read_totalize",
+              "reset_totalize"
+            ],
+            "hardwareValidated": false,
+            "implicitFallbackMustBecomeExplicit": true,
+            "profile": "generic_counter"
+          }
+        },
+        "manufacturer": "Tektronix",
+        "migration": "required",
+        "model": "FCA3100",
+        "repository": "instrument-components-tektronix"
+      }
+    ],
+    "kinds": [
+      "Counter"
+    ],
+    "defaultChannels": "legacy supported-ID hints, not physical completeness",
+    "defaultOutputs": "modeled outputless class",
+    "temperatureUnit": "Unknown",
+    "hardwareValidated": false,
+    "shutdownSteps": []
+  },
+  {
+    "driver": "tektronix.mdo3024",
+    "hints": [
+      {
+        "evidence": "identity-hint-only",
+        "hardwareValidated": false,
+        "kinds": [
+          "Oscilloscope"
+        ],
+        "legacyResolution": {
+          "Oscilloscope": {
+            "commandKeys": [
+              "channel_coupling",
+              "channel_display",
+              "measure_frequency",
+              "measure_vpp",
+              "run",
+              "set_channel_scale",
+              "set_timebase_scale",
+              "single",
+              "stop",
+              "trigger_level",
+              "trigger_slope",
+              "trigger_source",
+              "waveform_data",
+              "waveform_format_ascii",
+              "waveform_preamble",
+              "waveform_source"
+            ],
+            "hardwareValidated": false,
+            "implicitFallbackMustBecomeExplicit": true,
+            "profile": "generic_scope"
+          }
+        },
+        "manufacturer": "Tektronix",
+        "migration": "required",
+        "model": "MDO3024",
+        "repository": "instrument-components-tektronix"
+      }
+    ],
+    "kinds": [
+      "Oscilloscope"
+    ],
+    "defaultChannels": "legacy supported-ID hints, not physical completeness",
+    "defaultOutputs": "modeled outputless class",
+    "temperatureUnit": "Unknown",
+    "hardwareValidated": false,
+    "shutdownSteps": [
+      {
+        "command": ":STOP",
+        "response": "Write"
+      }
+    ]
+  },
+  {
+    "driver": "tektronix.rsa306b",
+    "hints": [
+      {
+        "evidence": "identity-hint-only",
+        "hardwareValidated": false,
+        "kinds": [
+          "SpectrumAnalyzer"
+        ],
+        "legacyResolution": {
+          "SpectrumAnalyzer": {
+            "commandKeys": [
+              "center_frequency",
+              "marker_peak",
+              "marker_x",
+              "marker_y",
+              "rbw",
+              "ref_level",
+              "single_sweep",
+              "span",
+              "sweep_continuous",
+              "trace_data",
+              "vbw",
+              "wait_opc"
+            ],
+            "hardwareValidated": false,
+            "implicitFallbackMustBecomeExplicit": true,
+            "profile": "generic_specan"
+          }
+        },
+        "manufacturer": "Tektronix",
+        "migration": "required",
+        "model": "RSA306B",
+        "repository": "instrument-components-tektronix"
+      }
+    ],
+    "kinds": [
+      "SpectrumAnalyzer"
+    ],
+    "defaultChannels": "legacy supported-ID hints, not physical completeness",
+    "defaultOutputs": "modeled outputless class",
+    "temperatureUnit": "Unknown",
+    "hardwareValidated": false,
+    "shutdownSteps": [
+      {
+        "command": ":INIT:CONT OFF",
+        "response": "Write"
+      }
+    ]
+  }
+]

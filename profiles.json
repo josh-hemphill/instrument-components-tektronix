@@ -1,0 +1,661 @@
+{
+  "schemaVersion": 1,
+  "contractMajor": 1,
+  "profiles": [
+    {
+      "id": "tektronix.afg31000",
+      "channels": [
+        1
+      ],
+      "outputs": null,
+      "rules": [
+        {
+          "manufacturer": "Tektronix",
+          "model": "AFG31000"
+        }
+      ],
+      "plans": [
+        {
+          "operation": "FunctionGeneratorSetWaveform",
+          "steps": [
+            {
+              "command": ":SOUR:FUNC {waveform}",
+              "response": "Write"
+            }
+          ],
+          "tokens": {
+            "waveform": {
+              "Sine": "SIN",
+              "Square": "SQU",
+              "Ramp": "RAMP",
+              "Pulse": "PULS",
+              "Noise": "NOIS",
+              "Dc": "DC"
+            }
+          }
+        },
+        {
+          "operation": "FunctionGeneratorSetFrequency",
+          "steps": [
+            {
+              "command": ":SOUR:FREQ {hz}",
+              "response": "Write"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "FunctionGeneratorSetAmplitude",
+          "steps": [
+            {
+              "command": ":SOUR:VOLT {vpp}",
+              "response": "Write"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "FunctionGeneratorSetOffset",
+          "steps": [
+            {
+              "command": ":SOUR:VOLT:OFFS {volts}",
+              "response": "Write"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "FunctionGeneratorSetDutyCycle",
+          "steps": [
+            {
+              "command": ":SOUR:FUNC:SQU:DCYC {percent}",
+              "response": "Write"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "FunctionGeneratorSetLoad",
+          "steps": [
+            {
+              "command": ":OUTP:LOAD {ohms}",
+              "response": "Write"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "FunctionGeneratorOutputEnable",
+          "steps": [
+            {
+              "command": ":OUTP {enabled}",
+              "response": "Write"
+            }
+          ],
+          "tokens": {
+            "enabled": {
+              "true": "ON",
+              "false": "OFF"
+            }
+          }
+        },
+        {
+          "operation": "FunctionGeneratorSetBurstCount",
+          "steps": [
+            {
+              "command": ":SOUR:BURS:NCYC {count}",
+              "response": "Write"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "FunctionGeneratorSetBurstState",
+          "steps": [
+            {
+              "command": ":SOUR:BURS:STAT {enabled}",
+              "response": "Write"
+            }
+          ],
+          "tokens": {
+            "enabled": {
+              "true": "ON",
+              "false": "OFF"
+            }
+          }
+        },
+        {
+          "operation": "FunctionGeneratorSetBurstTriggerSource",
+          "steps": [
+            {
+              "command": ":TRIG:SOUR {source}",
+              "response": "Write"
+            }
+          ],
+          "tokens": {
+            "source": {
+              "IMM": "IMM",
+              "EXT": "EXT",
+              "BUS": "BUS"
+            }
+          }
+        },
+        {
+          "operation": "FunctionGeneratorReadFrequency",
+          "steps": [
+            {
+              "command": ":SOUR:FREQ?",
+              "response": "Value"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "QueryIdentity",
+          "steps": [
+            {
+              "command": "*IDN?",
+              "response": "Value"
+            }
+          ]
+        },
+        {
+          "operation": "Reset",
+          "steps": [
+            {
+              "command": "*RST",
+              "response": "Write"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tektronix.fca3100",
+      "channels": [
+        1
+      ],
+      "outputs": [],
+      "rules": [
+        {
+          "manufacturer": "Tektronix",
+          "model": "FCA3100"
+        }
+      ],
+      "plans": [
+        {
+          "operation": "CounterMeasureFrequency",
+          "steps": [
+            {
+              "command": ":MEASure:FREQuency?",
+              "response": "Value"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "CounterMeasurePeriod",
+          "steps": [
+            {
+              "command": ":MEASure:PERiod?",
+              "response": "Value"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "CounterSetGateTime",
+          "steps": [
+            {
+              "command": ":SENSe:FREQuency:APERture {seconds}",
+              "response": "Write"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "CounterSelectChannel",
+          "steps": [
+            {
+              "command": ":SENSe:FUNCtion:ON \"FREQ {channel}\"",
+              "response": "Write"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "CounterResetTotalize",
+          "steps": [
+            {
+              "command": ":COUNter:CRESet",
+              "response": "Write"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "CounterReadTotalize",
+          "steps": [
+            {
+              "command": ":COUNter:DATA?",
+              "response": "Value"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "QueryIdentity",
+          "steps": [
+            {
+              "command": "*IDN?",
+              "response": "Value"
+            }
+          ]
+        },
+        {
+          "operation": "Reset",
+          "steps": [
+            {
+              "command": "*RST",
+              "response": "Write"
+            }
+          ]
+        },
+        {
+          "operation": "Shutdown",
+          "steps": []
+        }
+      ]
+    },
+    {
+      "id": "tektronix.mdo3024",
+      "channels": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "outputs": [],
+      "rules": [
+        {
+          "manufacturer": "Tektronix",
+          "model": "MDO3024"
+        }
+      ],
+      "plans": [
+        {
+          "operation": "OscilloscopeSetTimebaseScale",
+          "steps": [
+            {
+              "command": ":TIMebase:SCALe {seconds_per_div}",
+              "response": "Write"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "OscilloscopeReadTimebaseScale",
+          "steps": [
+            {
+              "command": ":TIMebase:SCALe?",
+              "response": "Value"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "OscilloscopeSetChannelScale",
+          "steps": [
+            {
+              "command": ":CHANnel{channel}:SCALe {volts_per_div}",
+              "response": "Write"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "OscilloscopeSetChannelDisplay",
+          "steps": [
+            {
+              "command": ":CHANnel{channel}:DISP {enabled}",
+              "response": "Write"
+            }
+          ],
+          "tokens": {
+            "enabled": {
+              "true": "ON",
+              "false": "OFF"
+            }
+          }
+        },
+        {
+          "operation": "OscilloscopeSetChannelCoupling",
+          "steps": [
+            {
+              "command": ":CHANnel{channel}:COUP {coupling}",
+              "response": "Write"
+            }
+          ],
+          "tokens": {
+            "coupling": {
+              "DC": "DC",
+              "AC": "AC",
+              "GND": "GND"
+            }
+          }
+        },
+        {
+          "operation": "OscilloscopeSetTriggerSource",
+          "steps": [
+            {
+              "command": ":TRIGger:EDGE:SOURce {source}",
+              "response": "Write"
+            }
+          ],
+          "tokens": {
+            "source": {
+              "CHAN1": "CHAN1",
+              "CHAN2": "CHAN2",
+              "CHAN3": "CHAN3",
+              "CHAN4": "CHAN4",
+              "EXT": "EXT",
+              "LINE": "LINE"
+            }
+          }
+        },
+        {
+          "operation": "OscilloscopeSetTriggerLevel",
+          "steps": [
+            {
+              "command": ":TRIGger:EDGE:LEVel {volts}",
+              "response": "Write"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "OscilloscopeSetTriggerSlope",
+          "steps": [
+            {
+              "command": ":TRIGger:EDGE:SLOPe {slope}",
+              "response": "Write"
+            }
+          ],
+          "tokens": {
+            "slope": {
+              "POS": "POS",
+              "NEG": "NEG",
+              "EITH": "EITH"
+            }
+          }
+        },
+        {
+          "operation": "OscilloscopeRun",
+          "steps": [
+            {
+              "command": ":RUN",
+              "response": "Write"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "OscilloscopeStop",
+          "steps": [
+            {
+              "command": ":STOP",
+              "response": "Write"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "OscilloscopeSingle",
+          "steps": [
+            {
+              "command": ":SINGle",
+              "response": "Write"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "OscilloscopeMeasureVpp",
+          "steps": [
+            {
+              "command": ":MEASure:VPP? CHAN{channel}",
+              "response": "Value"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "OscilloscopeMeasureFrequency",
+          "steps": [
+            {
+              "command": ":MEASure:FREQuency? CHAN{channel}",
+              "response": "Value"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "OscilloscopeCaptureVoltageTrace",
+          "steps": [
+            {
+              "command": ":WAVeform:SOURce CHAN{channel}",
+              "response": "Write"
+            },
+            {
+              "command": ":WAVeform:FORMat ASCii",
+              "response": "Write"
+            },
+            {
+              "command": ":WAVeform:PREamble?",
+              "response": "Preamble"
+            },
+            {
+              "command": ":WAVeform:DATA?",
+              "response": "Value"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "QueryIdentity",
+          "steps": [
+            {
+              "command": "*IDN?",
+              "response": "Value"
+            }
+          ]
+        },
+        {
+          "operation": "Reset",
+          "steps": [
+            {
+              "command": "*RST",
+              "response": "Write"
+            }
+          ]
+        },
+        {
+          "operation": "Shutdown",
+          "steps": [
+            {
+              "command": ":STOP",
+              "response": "Write"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tektronix.rsa306b",
+      "channels": [
+        1
+      ],
+      "outputs": [],
+      "rules": [
+        {
+          "manufacturer": "Tektronix",
+          "model": "RSA306B"
+        }
+      ],
+      "plans": [
+        {
+          "operation": "SpectrumAnalyzerSetCenterFrequency",
+          "steps": [
+            {
+              "command": ":FREQ:CENT {hz}",
+              "response": "Write"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "SpectrumAnalyzerSetSpan",
+          "steps": [
+            {
+              "command": ":FREQ:SPAN {hz}",
+              "response": "Write"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "SpectrumAnalyzerSetRbw",
+          "steps": [
+            {
+              "command": ":BAND {hz}",
+              "response": "Write"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "SpectrumAnalyzerSetVbw",
+          "steps": [
+            {
+              "command": ":BAND:VID {hz}",
+              "response": "Write"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "SpectrumAnalyzerSetRefLevel",
+          "steps": [
+            {
+              "command": ":DISP:WIND:TRAC:Y:RLEV {dbm}",
+              "response": "Write"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "SpectrumAnalyzerFetchTraceAscii",
+          "steps": [
+            {
+              "command": ":TRAC:DATA? TRACE1",
+              "response": "Value"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "SpectrumAnalyzerMarkerPeak",
+          "steps": [
+            {
+              "command": ":CALC:MARK:MAX",
+              "response": "Write"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "SpectrumAnalyzerMarkerX",
+          "steps": [
+            {
+              "command": ":CALC:MARK:X?",
+              "response": "Value"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "SpectrumAnalyzerMarkerY",
+          "steps": [
+            {
+              "command": ":CALC:MARK:Y?",
+              "response": "Value"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "SpectrumAnalyzerSweepContinuous",
+          "steps": [
+            {
+              "command": ":INIT:CONT {enabled}",
+              "response": "Write"
+            }
+          ],
+          "tokens": {
+            "enabled": {
+              "true": "ON",
+              "false": "OFF"
+            }
+          }
+        },
+        {
+          "operation": "SpectrumAnalyzerSingleSweep",
+          "steps": [
+            {
+              "command": ":INIT:IMM",
+              "response": "Write"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "SpectrumAnalyzerWaitOpc",
+          "steps": [
+            {
+              "command": "*OPC?",
+              "response": "Completion"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "QueryIdentity",
+          "steps": [
+            {
+              "command": "*IDN?",
+              "response": "Value"
+            }
+          ]
+        },
+        {
+          "operation": "Reset",
+          "steps": [
+            {
+              "command": "*RST",
+              "response": "Write"
+            }
+          ]
+        },
+        {
+          "operation": "Shutdown",
+          "steps": [
+            {
+              "command": ":INIT:CONT OFF",
+              "response": "Write"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
