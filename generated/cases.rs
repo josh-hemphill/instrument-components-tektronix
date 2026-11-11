@@ -436,5 +436,396 @@ ScriptStep::Write(":INIT:CONT OFF".into()),
 ScriptStep::Close(Ok(())),
 ],
 expected: Some(CatalogReply::Unit), expected_error: None },
+CatalogCase { id: "tektronix.afg31000|B|FunctionGeneratorSetWaveform-0-transport-failure", calls: vec![
+CatalogRequest::FunctionGeneratorSetWaveform { waveform: Waveform::Sine },
+], script: vec![
+ScriptStep::WriteFailure(":SOUR:FUNC SIN".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "tektronix.afg31000|B|FunctionGeneratorSetFrequency-0-transport-failure", calls: vec![
+CatalogRequest::FunctionGeneratorSetFrequency { hz: 2.5 },
+], script: vec![
+ScriptStep::WriteFailure(":SOUR:FREQ 2.5".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "tektronix.afg31000|B|FunctionGeneratorSetAmplitude-0-transport-failure", calls: vec![
+CatalogRequest::FunctionGeneratorSetAmplitude { vpp: 2.5 },
+], script: vec![
+ScriptStep::WriteFailure(":SOUR:VOLT 2.5".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "tektronix.afg31000|B|FunctionGeneratorSetOffset-0-transport-failure", calls: vec![
+CatalogRequest::FunctionGeneratorSetOffset { volts: 2.5 },
+], script: vec![
+ScriptStep::WriteFailure(":SOUR:VOLT:OFFS 2.5".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "tektronix.afg31000|B|FunctionGeneratorSetDutyCycle-0-transport-failure", calls: vec![
+CatalogRequest::FunctionGeneratorSetDutyCycle { percent: 2.5 },
+], script: vec![
+ScriptStep::WriteFailure(":SOUR:FUNC:SQU:DCYC 2.5".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "tektronix.afg31000|B|FunctionGeneratorSetLoad-0-transport-failure", calls: vec![
+CatalogRequest::FunctionGeneratorSetLoad { ohms: 2.5 },
+], script: vec![
+ScriptStep::WriteFailure(":OUTP:LOAD 2.5".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "tektronix.afg31000|B|FunctionGeneratorOutputEnable-0-transport-failure", calls: vec![
+CatalogRequest::FunctionGeneratorOutputEnable { enabled: true },
+], script: vec![
+ScriptStep::WriteFailure(":OUTP ON".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "tektronix.afg31000|B|FunctionGeneratorSetBurstCount-0-transport-failure", calls: vec![
+CatalogRequest::FunctionGeneratorSetBurstCount { count: 1 },
+], script: vec![
+ScriptStep::WriteFailure(":SOUR:BURS:NCYC 1".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "tektronix.afg31000|B|FunctionGeneratorSetBurstState-0-transport-failure", calls: vec![
+CatalogRequest::FunctionGeneratorSetBurstState { enabled: true },
+], script: vec![
+ScriptStep::WriteFailure(":SOUR:BURS:STAT ON".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "tektronix.afg31000|B|FunctionGeneratorSetBurstTriggerSource-0-transport-failure", calls: vec![
+CatalogRequest::FunctionGeneratorSetBurstTriggerSource { source: "IMM".into() },
+], script: vec![
+ScriptStep::WriteFailure(":TRIG:SOUR IMM".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "tektronix.afg31000|B|FunctionGeneratorReadFrequency-0-transport-failure", calls: vec![
+CatalogRequest::FunctionGeneratorReadFrequency,
+], script: vec![
+ScriptStep::Query(":SOUR:FREQ?".into(), Err(instrument_api::DriverError::new(ErrorKind::Transport, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "tektronix.afg31000|B|QueryIdentity-0-transport-failure", calls: vec![
+CatalogRequest::QueryIdentity,
+], script: vec![
+ScriptStep::Query("*IDN?".into(), Err(instrument_api::DriverError::new(ErrorKind::Transport, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "tektronix.afg31000|B|Reset-0-transport-failure", calls: vec![
+CatalogRequest::Reset,
+], script: vec![
+ScriptStep::WriteFailure("*RST".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "tektronix.afg31000|B|Shutdown-0-transport-failure", calls: vec![
+CatalogRequest::Shutdown,
+], script: vec![
+ScriptStep::WriteFailure(":OUTP OFF".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Shutdown) },
+CatalogCase { id: "tektronix.fca3100|B|CounterMeasureFrequency-0-transport-failure", calls: vec![
+CatalogRequest::CounterMeasureFrequency,
+], script: vec![
+ScriptStep::Query(":MEASure:FREQuency?".into(), Err(instrument_api::DriverError::new(ErrorKind::Transport, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "tektronix.fca3100|B|CounterMeasurePeriod-0-transport-failure", calls: vec![
+CatalogRequest::CounterMeasurePeriod,
+], script: vec![
+ScriptStep::Query(":MEASure:PERiod?".into(), Err(instrument_api::DriverError::new(ErrorKind::Transport, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "tektronix.fca3100|B|CounterSetGateTime-0-transport-failure", calls: vec![
+CatalogRequest::CounterSetGateTime { seconds: 2.5 },
+], script: vec![
+ScriptStep::WriteFailure(":SENSe:FREQuency:APERture 2.5".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "tektronix.fca3100|B|CounterSelectChannel-0-transport-failure", calls: vec![
+CatalogRequest::CounterSelectChannel { channel: 1 },
+], script: vec![
+ScriptStep::WriteFailure(":SENSe:FUNCtion:ON \"FREQ 1\"".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "tektronix.fca3100|B|CounterResetTotalize-0-transport-failure", calls: vec![
+CatalogRequest::CounterResetTotalize,
+], script: vec![
+ScriptStep::WriteFailure(":COUNter:CRESet".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "tektronix.fca3100|B|CounterReadTotalize-0-transport-failure", calls: vec![
+CatalogRequest::CounterReadTotalize,
+], script: vec![
+ScriptStep::Query(":COUNter:DATA?".into(), Err(instrument_api::DriverError::new(ErrorKind::Transport, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "tektronix.fca3100|B|QueryIdentity-0-transport-failure", calls: vec![
+CatalogRequest::QueryIdentity,
+], script: vec![
+ScriptStep::Query("*IDN?".into(), Err(instrument_api::DriverError::new(ErrorKind::Transport, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "tektronix.fca3100|B|Reset-0-transport-failure", calls: vec![
+CatalogRequest::Reset,
+], script: vec![
+ScriptStep::WriteFailure("*RST".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "tektronix.mdo3024|B|OscilloscopeSetTimebaseScale-0-transport-failure", calls: vec![
+CatalogRequest::OscilloscopeSetTimebaseScale { seconds_per_div: 2.5 },
+], script: vec![
+ScriptStep::WriteFailure(":TIMebase:SCALe 2.5".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "tektronix.mdo3024|B|OscilloscopeReadTimebaseScale-0-transport-failure", calls: vec![
+CatalogRequest::OscilloscopeReadTimebaseScale,
+], script: vec![
+ScriptStep::Query(":TIMebase:SCALe?".into(), Err(instrument_api::DriverError::new(ErrorKind::Transport, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "tektronix.mdo3024|B|OscilloscopeSetChannelScale-0-transport-failure", calls: vec![
+CatalogRequest::OscilloscopeSetChannelScale { channel: 1, volts_per_div: 2.5 },
+], script: vec![
+ScriptStep::WriteFailure(":CHANnel1:SCALe 2.5".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "tektronix.mdo3024|B|OscilloscopeSetChannelDisplay-0-transport-failure", calls: vec![
+CatalogRequest::OscilloscopeSetChannelDisplay { channel: 1, enabled: true },
+], script: vec![
+ScriptStep::WriteFailure(":CHANnel1:DISP ON".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "tektronix.mdo3024|B|OscilloscopeSetChannelCoupling-0-transport-failure", calls: vec![
+CatalogRequest::OscilloscopeSetChannelCoupling { channel: 1, coupling: "DC".into() },
+], script: vec![
+ScriptStep::WriteFailure(":CHANnel1:COUP DC".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "tektronix.mdo3024|B|OscilloscopeSetTriggerSource-0-transport-failure", calls: vec![
+CatalogRequest::OscilloscopeSetTriggerSource { source: "CHAN1".into() },
+], script: vec![
+ScriptStep::WriteFailure(":TRIGger:EDGE:SOURce CHAN1".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "tektronix.mdo3024|B|OscilloscopeSetTriggerLevel-0-transport-failure", calls: vec![
+CatalogRequest::OscilloscopeSetTriggerLevel { volts: 2.5 },
+], script: vec![
+ScriptStep::WriteFailure(":TRIGger:EDGE:LEVel 2.5".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "tektronix.mdo3024|B|OscilloscopeSetTriggerSlope-0-transport-failure", calls: vec![
+CatalogRequest::OscilloscopeSetTriggerSlope { slope: "POS".into() },
+], script: vec![
+ScriptStep::WriteFailure(":TRIGger:EDGE:SLOPe POS".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "tektronix.mdo3024|B|OscilloscopeRun-0-transport-failure", calls: vec![
+CatalogRequest::OscilloscopeRun,
+], script: vec![
+ScriptStep::WriteFailure(":RUN".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "tektronix.mdo3024|B|OscilloscopeStop-0-transport-failure", calls: vec![
+CatalogRequest::OscilloscopeStop,
+], script: vec![
+ScriptStep::WriteFailure(":STOP".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "tektronix.mdo3024|B|OscilloscopeSingle-0-transport-failure", calls: vec![
+CatalogRequest::OscilloscopeSingle,
+], script: vec![
+ScriptStep::WriteFailure(":SINGle".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "tektronix.mdo3024|B|OscilloscopeMeasureVpp-0-transport-failure", calls: vec![
+CatalogRequest::OscilloscopeMeasureVpp { channel: 1 },
+], script: vec![
+ScriptStep::Query(":MEASure:VPP? CHAN1".into(), Err(instrument_api::DriverError::new(ErrorKind::Transport, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "tektronix.mdo3024|B|OscilloscopeMeasureFrequency-0-transport-failure", calls: vec![
+CatalogRequest::OscilloscopeMeasureFrequency { channel: 1 },
+], script: vec![
+ScriptStep::Query(":MEASure:FREQuency? CHAN1".into(), Err(instrument_api::DriverError::new(ErrorKind::Transport, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "tektronix.mdo3024|B|OscilloscopeCaptureVoltageTrace-0-transport-failure", calls: vec![
+CatalogRequest::OscilloscopeCaptureVoltageTrace { channel: 1 },
+], script: vec![
+ScriptStep::WriteFailure(":WAVeform:SOURce CHAN1".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "tektronix.mdo3024|B|QueryIdentity-0-transport-failure", calls: vec![
+CatalogRequest::QueryIdentity,
+], script: vec![
+ScriptStep::Query("*IDN?".into(), Err(instrument_api::DriverError::new(ErrorKind::Transport, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "tektronix.mdo3024|B|Reset-0-transport-failure", calls: vec![
+CatalogRequest::Reset,
+], script: vec![
+ScriptStep::WriteFailure("*RST".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "tektronix.mdo3024|B|Shutdown-0-transport-failure", calls: vec![
+CatalogRequest::Shutdown,
+], script: vec![
+ScriptStep::WriteFailure(":STOP".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Shutdown) },
+CatalogCase { id: "tektronix.rsa306b|B|SpectrumAnalyzerSetCenterFrequency-0-transport-failure", calls: vec![
+CatalogRequest::SpectrumAnalyzerSetCenterFrequency { hz: 2.5 },
+], script: vec![
+ScriptStep::WriteFailure(":FREQ:CENT 2.5".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "tektronix.rsa306b|B|SpectrumAnalyzerSetSpan-0-transport-failure", calls: vec![
+CatalogRequest::SpectrumAnalyzerSetSpan { hz: 2.5 },
+], script: vec![
+ScriptStep::WriteFailure(":FREQ:SPAN 2.5".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "tektronix.rsa306b|B|SpectrumAnalyzerSetRbw-0-transport-failure", calls: vec![
+CatalogRequest::SpectrumAnalyzerSetRbw { hz: 2.5 },
+], script: vec![
+ScriptStep::WriteFailure(":BAND 2.5".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "tektronix.rsa306b|B|SpectrumAnalyzerSetVbw-0-transport-failure", calls: vec![
+CatalogRequest::SpectrumAnalyzerSetVbw { hz: 2.5 },
+], script: vec![
+ScriptStep::WriteFailure(":BAND:VID 2.5".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "tektronix.rsa306b|B|SpectrumAnalyzerSetRefLevel-0-transport-failure", calls: vec![
+CatalogRequest::SpectrumAnalyzerSetRefLevel { dbm: 2.5 },
+], script: vec![
+ScriptStep::WriteFailure(":DISP:WIND:TRAC:Y:RLEV 2.5".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "tektronix.rsa306b|B|SpectrumAnalyzerFetchTraceAscii-0-transport-failure", calls: vec![
+CatalogRequest::SpectrumAnalyzerFetchTraceAscii,
+], script: vec![
+ScriptStep::Query(":TRAC:DATA? TRACE1".into(), Err(instrument_api::DriverError::new(ErrorKind::Transport, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "tektronix.rsa306b|B|SpectrumAnalyzerMarkerPeak-0-transport-failure", calls: vec![
+CatalogRequest::SpectrumAnalyzerMarkerPeak,
+], script: vec![
+ScriptStep::WriteFailure(":CALC:MARK:MAX".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "tektronix.rsa306b|B|SpectrumAnalyzerMarkerX-0-transport-failure", calls: vec![
+CatalogRequest::SpectrumAnalyzerMarkerX,
+], script: vec![
+ScriptStep::Query(":CALC:MARK:X?".into(), Err(instrument_api::DriverError::new(ErrorKind::Transport, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "tektronix.rsa306b|B|SpectrumAnalyzerMarkerY-0-transport-failure", calls: vec![
+CatalogRequest::SpectrumAnalyzerMarkerY,
+], script: vec![
+ScriptStep::Query(":CALC:MARK:Y?".into(), Err(instrument_api::DriverError::new(ErrorKind::Transport, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "tektronix.rsa306b|B|SpectrumAnalyzerSweepContinuous-0-transport-failure", calls: vec![
+CatalogRequest::SpectrumAnalyzerSweepContinuous { enabled: true },
+], script: vec![
+ScriptStep::WriteFailure(":INIT:CONT ON".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "tektronix.rsa306b|B|SpectrumAnalyzerSingleSweep-0-transport-failure", calls: vec![
+CatalogRequest::SpectrumAnalyzerSingleSweep,
+], script: vec![
+ScriptStep::WriteFailure(":INIT:IMM".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "tektronix.rsa306b|B|SpectrumAnalyzerWaitOpc-0-transport-failure", calls: vec![
+CatalogRequest::SpectrumAnalyzerWaitOpc,
+], script: vec![
+ScriptStep::Query("*OPC?".into(), Err(instrument_api::DriverError::new(ErrorKind::Transport, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "tektronix.rsa306b|B|QueryIdentity-0-transport-failure", calls: vec![
+CatalogRequest::QueryIdentity,
+], script: vec![
+ScriptStep::Query("*IDN?".into(), Err(instrument_api::DriverError::new(ErrorKind::Transport, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "tektronix.rsa306b|B|Reset-0-transport-failure", calls: vec![
+CatalogRequest::Reset,
+], script: vec![
+ScriptStep::WriteFailure("*RST".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "tektronix.rsa306b|B|Shutdown-0-transport-failure", calls: vec![
+CatalogRequest::Shutdown,
+], script: vec![
+ScriptStep::WriteFailure(":INIT:CONT OFF".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Shutdown) },
+CatalogCase { id: "tektronix.mdo3024|B|bound-source-CHAN3", calls: vec![
+CatalogRequest::OscilloscopeSetTriggerSource { source: "CHAN3".into() },
+], script: vec![
+ScriptStep::Write(":TRIGger:EDGE:SOURce CHAN3".into()),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Unit), expected_error: None },
+CatalogCase { id: "tektronix.mdo3024|B|bound-source-CHAN2", calls: vec![
+CatalogRequest::OscilloscopeSetTriggerSource { source: "CHAN2".into() },
+], script: vec![
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::UnsupportedOperation) },
 ] }
 }

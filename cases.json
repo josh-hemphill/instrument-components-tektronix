@@ -1432,6 +1432,1200 @@
       "expected": {
         "kind": "unit"
       }
+    },
+    {
+      "id": "tektronix.afg31000|B|FunctionGeneratorSetWaveform-0-transport-failure",
+      "calls": [
+        {
+          "operation": "FunctionGeneratorSetWaveform",
+          "arguments": {
+            "waveform": "Sine"
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":SOUR:FUNC SIN",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "tektronix.afg31000|B|FunctionGeneratorSetFrequency-0-transport-failure",
+      "calls": [
+        {
+          "operation": "FunctionGeneratorSetFrequency",
+          "arguments": {
+            "hz": 2.5
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":SOUR:FREQ 2.5",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "tektronix.afg31000|B|FunctionGeneratorSetAmplitude-0-transport-failure",
+      "calls": [
+        {
+          "operation": "FunctionGeneratorSetAmplitude",
+          "arguments": {
+            "vpp": 2.5
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":SOUR:VOLT 2.5",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "tektronix.afg31000|B|FunctionGeneratorSetOffset-0-transport-failure",
+      "calls": [
+        {
+          "operation": "FunctionGeneratorSetOffset",
+          "arguments": {
+            "volts": 2.5
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":SOUR:VOLT:OFFS 2.5",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "tektronix.afg31000|B|FunctionGeneratorSetDutyCycle-0-transport-failure",
+      "calls": [
+        {
+          "operation": "FunctionGeneratorSetDutyCycle",
+          "arguments": {
+            "percent": 2.5
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":SOUR:FUNC:SQU:DCYC 2.5",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "tektronix.afg31000|B|FunctionGeneratorSetLoad-0-transport-failure",
+      "calls": [
+        {
+          "operation": "FunctionGeneratorSetLoad",
+          "arguments": {
+            "ohms": 2.5
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":OUTP:LOAD 2.5",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "tektronix.afg31000|B|FunctionGeneratorOutputEnable-0-transport-failure",
+      "calls": [
+        {
+          "operation": "FunctionGeneratorOutputEnable",
+          "arguments": {
+            "enabled": true
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":OUTP ON",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "tektronix.afg31000|B|FunctionGeneratorSetBurstCount-0-transport-failure",
+      "calls": [
+        {
+          "operation": "FunctionGeneratorSetBurstCount",
+          "arguments": {
+            "count": 1
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":SOUR:BURS:NCYC 1",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "tektronix.afg31000|B|FunctionGeneratorSetBurstState-0-transport-failure",
+      "calls": [
+        {
+          "operation": "FunctionGeneratorSetBurstState",
+          "arguments": {
+            "enabled": true
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":SOUR:BURS:STAT ON",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "tektronix.afg31000|B|FunctionGeneratorSetBurstTriggerSource-0-transport-failure",
+      "calls": [
+        {
+          "operation": "FunctionGeneratorSetBurstTriggerSource",
+          "arguments": {
+            "source": "IMM"
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":TRIG:SOUR IMM",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "tektronix.afg31000|B|FunctionGeneratorReadFrequency-0-transport-failure",
+      "calls": [
+        {
+          "operation": "FunctionGeneratorReadFrequency",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":SOUR:FREQ?",
+          "response": "3.3",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "tektronix.afg31000|B|QueryIdentity-0-transport-failure",
+      "calls": [
+        {
+          "operation": "QueryIdentity",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": "*IDN?",
+          "response": "Validation,Device,SN,1",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "tektronix.afg31000|B|Reset-0-transport-failure",
+      "calls": [
+        {
+          "operation": "Reset",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "*RST",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "tektronix.afg31000|B|Shutdown-0-transport-failure",
+      "calls": [
+        {
+          "operation": "Shutdown",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":OUTP OFF",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Shutdown"
+    },
+    {
+      "id": "tektronix.fca3100|B|CounterMeasureFrequency-0-transport-failure",
+      "calls": [
+        {
+          "operation": "CounterMeasureFrequency",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":MEASure:FREQuency?",
+          "response": "3.3",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "tektronix.fca3100|B|CounterMeasurePeriod-0-transport-failure",
+      "calls": [
+        {
+          "operation": "CounterMeasurePeriod",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":MEASure:PERiod?",
+          "response": "3.3",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "tektronix.fca3100|B|CounterSetGateTime-0-transport-failure",
+      "calls": [
+        {
+          "operation": "CounterSetGateTime",
+          "arguments": {
+            "seconds": 2.5
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":SENSe:FREQuency:APERture 2.5",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "tektronix.fca3100|B|CounterSelectChannel-0-transport-failure",
+      "calls": [
+        {
+          "operation": "CounterSelectChannel",
+          "arguments": {
+            "channel": 1
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":SENSe:FUNCtion:ON \"FREQ 1\"",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "tektronix.fca3100|B|CounterResetTotalize-0-transport-failure",
+      "calls": [
+        {
+          "operation": "CounterResetTotalize",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":COUNter:CRESet",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "tektronix.fca3100|B|CounterReadTotalize-0-transport-failure",
+      "calls": [
+        {
+          "operation": "CounterReadTotalize",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":COUNter:DATA?",
+          "response": "3.3",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "tektronix.fca3100|B|QueryIdentity-0-transport-failure",
+      "calls": [
+        {
+          "operation": "QueryIdentity",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": "*IDN?",
+          "response": "Validation,Device,SN,1",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "tektronix.fca3100|B|Reset-0-transport-failure",
+      "calls": [
+        {
+          "operation": "Reset",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "*RST",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "tektronix.mdo3024|B|OscilloscopeSetTimebaseScale-0-transport-failure",
+      "calls": [
+        {
+          "operation": "OscilloscopeSetTimebaseScale",
+          "arguments": {
+            "seconds_per_div": 2.5
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":TIMebase:SCALe 2.5",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "tektronix.mdo3024|B|OscilloscopeReadTimebaseScale-0-transport-failure",
+      "calls": [
+        {
+          "operation": "OscilloscopeReadTimebaseScale",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":TIMebase:SCALe?",
+          "response": "3.3",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "tektronix.mdo3024|B|OscilloscopeSetChannelScale-0-transport-failure",
+      "calls": [
+        {
+          "operation": "OscilloscopeSetChannelScale",
+          "arguments": {
+            "channel": 1,
+            "volts_per_div": 2.5
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":CHANnel1:SCALe 2.5",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "tektronix.mdo3024|B|OscilloscopeSetChannelDisplay-0-transport-failure",
+      "calls": [
+        {
+          "operation": "OscilloscopeSetChannelDisplay",
+          "arguments": {
+            "channel": 1,
+            "enabled": true
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":CHANnel1:DISP ON",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "tektronix.mdo3024|B|OscilloscopeSetChannelCoupling-0-transport-failure",
+      "calls": [
+        {
+          "operation": "OscilloscopeSetChannelCoupling",
+          "arguments": {
+            "channel": 1,
+            "coupling": "DC"
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":CHANnel1:COUP DC",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "tektronix.mdo3024|B|OscilloscopeSetTriggerSource-0-transport-failure",
+      "calls": [
+        {
+          "operation": "OscilloscopeSetTriggerSource",
+          "arguments": {
+            "source": "CHAN1"
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":TRIGger:EDGE:SOURce CHAN1",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "tektronix.mdo3024|B|OscilloscopeSetTriggerLevel-0-transport-failure",
+      "calls": [
+        {
+          "operation": "OscilloscopeSetTriggerLevel",
+          "arguments": {
+            "volts": 2.5
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":TRIGger:EDGE:LEVel 2.5",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "tektronix.mdo3024|B|OscilloscopeSetTriggerSlope-0-transport-failure",
+      "calls": [
+        {
+          "operation": "OscilloscopeSetTriggerSlope",
+          "arguments": {
+            "slope": "POS"
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":TRIGger:EDGE:SLOPe POS",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "tektronix.mdo3024|B|OscilloscopeRun-0-transport-failure",
+      "calls": [
+        {
+          "operation": "OscilloscopeRun",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":RUN",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "tektronix.mdo3024|B|OscilloscopeStop-0-transport-failure",
+      "calls": [
+        {
+          "operation": "OscilloscopeStop",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":STOP",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "tektronix.mdo3024|B|OscilloscopeSingle-0-transport-failure",
+      "calls": [
+        {
+          "operation": "OscilloscopeSingle",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":SINGle",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "tektronix.mdo3024|B|OscilloscopeMeasureVpp-0-transport-failure",
+      "calls": [
+        {
+          "operation": "OscilloscopeMeasureVpp",
+          "arguments": {
+            "channel": 1
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":MEASure:VPP? CHAN1",
+          "response": "3.3",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "tektronix.mdo3024|B|OscilloscopeMeasureFrequency-0-transport-failure",
+      "calls": [
+        {
+          "operation": "OscilloscopeMeasureFrequency",
+          "arguments": {
+            "channel": 1
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":MEASure:FREQuency? CHAN1",
+          "response": "3.3",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "tektronix.mdo3024|B|OscilloscopeCaptureVoltageTrace-0-transport-failure",
+      "calls": [
+        {
+          "operation": "OscilloscopeCaptureVoltageTrace",
+          "arguments": {
+            "channel": 1
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":WAVeform:SOURce CHAN1",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "tektronix.mdo3024|B|QueryIdentity-0-transport-failure",
+      "calls": [
+        {
+          "operation": "QueryIdentity",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": "*IDN?",
+          "response": "Validation,Device,SN,1",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "tektronix.mdo3024|B|Reset-0-transport-failure",
+      "calls": [
+        {
+          "operation": "Reset",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "*RST",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "tektronix.mdo3024|B|Shutdown-0-transport-failure",
+      "calls": [
+        {
+          "operation": "Shutdown",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":STOP",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Shutdown"
+    },
+    {
+      "id": "tektronix.rsa306b|B|SpectrumAnalyzerSetCenterFrequency-0-transport-failure",
+      "calls": [
+        {
+          "operation": "SpectrumAnalyzerSetCenterFrequency",
+          "arguments": {
+            "hz": 2.5
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":FREQ:CENT 2.5",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "tektronix.rsa306b|B|SpectrumAnalyzerSetSpan-0-transport-failure",
+      "calls": [
+        {
+          "operation": "SpectrumAnalyzerSetSpan",
+          "arguments": {
+            "hz": 2.5
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":FREQ:SPAN 2.5",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "tektronix.rsa306b|B|SpectrumAnalyzerSetRbw-0-transport-failure",
+      "calls": [
+        {
+          "operation": "SpectrumAnalyzerSetRbw",
+          "arguments": {
+            "hz": 2.5
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":BAND 2.5",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "tektronix.rsa306b|B|SpectrumAnalyzerSetVbw-0-transport-failure",
+      "calls": [
+        {
+          "operation": "SpectrumAnalyzerSetVbw",
+          "arguments": {
+            "hz": 2.5
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":BAND:VID 2.5",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "tektronix.rsa306b|B|SpectrumAnalyzerSetRefLevel-0-transport-failure",
+      "calls": [
+        {
+          "operation": "SpectrumAnalyzerSetRefLevel",
+          "arguments": {
+            "dbm": 2.5
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":DISP:WIND:TRAC:Y:RLEV 2.5",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "tektronix.rsa306b|B|SpectrumAnalyzerFetchTraceAscii-0-transport-failure",
+      "calls": [
+        {
+          "operation": "SpectrumAnalyzerFetchTraceAscii",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":TRAC:DATA? TRACE1",
+          "response": "1,2,3",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "tektronix.rsa306b|B|SpectrumAnalyzerMarkerPeak-0-transport-failure",
+      "calls": [
+        {
+          "operation": "SpectrumAnalyzerMarkerPeak",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":CALC:MARK:MAX",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "tektronix.rsa306b|B|SpectrumAnalyzerMarkerX-0-transport-failure",
+      "calls": [
+        {
+          "operation": "SpectrumAnalyzerMarkerX",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":CALC:MARK:X?",
+          "response": "3.3",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "tektronix.rsa306b|B|SpectrumAnalyzerMarkerY-0-transport-failure",
+      "calls": [
+        {
+          "operation": "SpectrumAnalyzerMarkerY",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":CALC:MARK:Y?",
+          "response": "3.3",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "tektronix.rsa306b|B|SpectrumAnalyzerSweepContinuous-0-transport-failure",
+      "calls": [
+        {
+          "operation": "SpectrumAnalyzerSweepContinuous",
+          "arguments": {
+            "enabled": true
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":INIT:CONT ON",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "tektronix.rsa306b|B|SpectrumAnalyzerSingleSweep-0-transport-failure",
+      "calls": [
+        {
+          "operation": "SpectrumAnalyzerSingleSweep",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":INIT:IMM",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "tektronix.rsa306b|B|SpectrumAnalyzerWaitOpc-0-transport-failure",
+      "calls": [
+        {
+          "operation": "SpectrumAnalyzerWaitOpc",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": "*OPC?",
+          "response": "1",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "tektronix.rsa306b|B|QueryIdentity-0-transport-failure",
+      "calls": [
+        {
+          "operation": "QueryIdentity",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": "*IDN?",
+          "response": "Validation,Device,SN,1",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "tektronix.rsa306b|B|Reset-0-transport-failure",
+      "calls": [
+        {
+          "operation": "Reset",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "*RST",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "tektronix.rsa306b|B|Shutdown-0-transport-failure",
+      "calls": [
+        {
+          "operation": "Shutdown",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":INIT:CONT OFF",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Shutdown"
+    },
+    {
+      "id": "tektronix.mdo3024|B|bound-source-CHAN3",
+      "calls": [
+        {
+          "operation": "OscilloscopeSetTriggerSource",
+          "arguments": {
+            "source": "CHAN3"
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":TRIGger:EDGE:SOURce CHAN3"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "unit"
+      }
+    },
+    {
+      "id": "tektronix.mdo3024|B|bound-source-CHAN2",
+      "calls": [
+        {
+          "operation": "OscilloscopeSetTriggerSource",
+          "arguments": {
+            "source": "CHAN2"
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "UnsupportedOperation"
     }
   ]
 }
