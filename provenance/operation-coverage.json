@@ -1,29 +1,28 @@
 [
   {
     "cases": [
-      "tektronix.afg31000|B|FunctionGeneratorSetWaveform-0",
-      "tektronix.afg31000|B|FunctionGeneratorSetWaveform-0-transport-failure"
+      "tektronix.afg31000|B|FunctionGeneratorOutputEnable-0",
+      "tektronix.afg31000|B|FunctionGeneratorOutputEnable-1",
+      "tektronix.afg31000|B|FunctionGeneratorOutputEnable-0-transport-failure"
     ],
     "disposition": "implemented-source-derived-no-hardware-evidence",
     "driver": "tektronix.afg31000",
     "negativeCases": [
-      "tektronix.afg31000|B|FunctionGeneratorSetWaveform-0-transport-failure"
+      "tektronix.afg31000|B|FunctionGeneratorOutputEnable-0-transport-failure"
     ],
-    "operation": "FunctionGeneratorSetWaveform"
+    "operation": "FunctionGeneratorOutputEnable"
   },
   {
     "cases": [
-      "tektronix.afg31000|B|FunctionGeneratorSetFrequency-0",
-      "tektronix.afg31000|B|invalid-FunctionGeneratorSetFrequency",
-      "tektronix.afg31000|B|FunctionGeneratorSetFrequency-0-transport-failure"
+      "tektronix.afg31000|B|FunctionGeneratorReadFrequency-0",
+      "tektronix.afg31000|B|FunctionGeneratorReadFrequency-0-transport-failure"
     ],
     "disposition": "implemented-source-derived-no-hardware-evidence",
     "driver": "tektronix.afg31000",
     "negativeCases": [
-      "tektronix.afg31000|B|invalid-FunctionGeneratorSetFrequency",
-      "tektronix.afg31000|B|FunctionGeneratorSetFrequency-0-transport-failure"
+      "tektronix.afg31000|B|FunctionGeneratorReadFrequency-0-transport-failure"
     ],
-    "operation": "FunctionGeneratorSetFrequency"
+    "operation": "FunctionGeneratorReadFrequency"
   },
   {
     "cases": [
@@ -36,55 +35,6 @@
       "tektronix.afg31000|B|FunctionGeneratorSetAmplitude-0-transport-failure"
     ],
     "operation": "FunctionGeneratorSetAmplitude"
-  },
-  {
-    "cases": [
-      "tektronix.afg31000|B|FunctionGeneratorSetOffset-0",
-      "tektronix.afg31000|B|FunctionGeneratorSetOffset-0-transport-failure"
-    ],
-    "disposition": "implemented-source-derived-no-hardware-evidence",
-    "driver": "tektronix.afg31000",
-    "negativeCases": [
-      "tektronix.afg31000|B|FunctionGeneratorSetOffset-0-transport-failure"
-    ],
-    "operation": "FunctionGeneratorSetOffset"
-  },
-  {
-    "cases": [
-      "tektronix.afg31000|B|FunctionGeneratorSetDutyCycle-0",
-      "tektronix.afg31000|B|FunctionGeneratorSetDutyCycle-0-transport-failure"
-    ],
-    "disposition": "implemented-source-derived-no-hardware-evidence",
-    "driver": "tektronix.afg31000",
-    "negativeCases": [
-      "tektronix.afg31000|B|FunctionGeneratorSetDutyCycle-0-transport-failure"
-    ],
-    "operation": "FunctionGeneratorSetDutyCycle"
-  },
-  {
-    "cases": [
-      "tektronix.afg31000|B|FunctionGeneratorSetLoad-0",
-      "tektronix.afg31000|B|FunctionGeneratorSetLoad-0-transport-failure"
-    ],
-    "disposition": "implemented-source-derived-no-hardware-evidence",
-    "driver": "tektronix.afg31000",
-    "negativeCases": [
-      "tektronix.afg31000|B|FunctionGeneratorSetLoad-0-transport-failure"
-    ],
-    "operation": "FunctionGeneratorSetLoad"
-  },
-  {
-    "cases": [
-      "tektronix.afg31000|B|FunctionGeneratorOutputEnable-0",
-      "tektronix.afg31000|B|FunctionGeneratorOutputEnable-1",
-      "tektronix.afg31000|B|FunctionGeneratorOutputEnable-0-transport-failure"
-    ],
-    "disposition": "implemented-source-derived-no-hardware-evidence",
-    "driver": "tektronix.afg31000",
-    "negativeCases": [
-      "tektronix.afg31000|B|FunctionGeneratorOutputEnable-0-transport-failure"
-    ],
-    "operation": "FunctionGeneratorOutputEnable"
   },
   {
     "cases": [
@@ -125,15 +75,65 @@
   },
   {
     "cases": [
-      "tektronix.afg31000|B|FunctionGeneratorReadFrequency-0",
-      "tektronix.afg31000|B|FunctionGeneratorReadFrequency-0-transport-failure"
+      "tektronix.afg31000|B|FunctionGeneratorSetDutyCycle-0",
+      "tektronix.afg31000|B|FunctionGeneratorSetDutyCycle-0-transport-failure"
     ],
     "disposition": "implemented-source-derived-no-hardware-evidence",
     "driver": "tektronix.afg31000",
     "negativeCases": [
-      "tektronix.afg31000|B|FunctionGeneratorReadFrequency-0-transport-failure"
+      "tektronix.afg31000|B|FunctionGeneratorSetDutyCycle-0-transport-failure"
     ],
-    "operation": "FunctionGeneratorReadFrequency"
+    "operation": "FunctionGeneratorSetDutyCycle"
+  },
+  {
+    "cases": [
+      "tektronix.afg31000|B|FunctionGeneratorSetFrequency-0",
+      "tektronix.afg31000|B|invalid-FunctionGeneratorSetFrequency",
+      "tektronix.afg31000|B|FunctionGeneratorSetFrequency-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "tektronix.afg31000",
+    "negativeCases": [
+      "tektronix.afg31000|B|invalid-FunctionGeneratorSetFrequency",
+      "tektronix.afg31000|B|FunctionGeneratorSetFrequency-0-transport-failure"
+    ],
+    "operation": "FunctionGeneratorSetFrequency"
+  },
+  {
+    "cases": [
+      "tektronix.afg31000|B|FunctionGeneratorSetLoad-0",
+      "tektronix.afg31000|B|FunctionGeneratorSetLoad-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "tektronix.afg31000",
+    "negativeCases": [
+      "tektronix.afg31000|B|FunctionGeneratorSetLoad-0-transport-failure"
+    ],
+    "operation": "FunctionGeneratorSetLoad"
+  },
+  {
+    "cases": [
+      "tektronix.afg31000|B|FunctionGeneratorSetOffset-0",
+      "tektronix.afg31000|B|FunctionGeneratorSetOffset-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "tektronix.afg31000",
+    "negativeCases": [
+      "tektronix.afg31000|B|FunctionGeneratorSetOffset-0-transport-failure"
+    ],
+    "operation": "FunctionGeneratorSetOffset"
+  },
+  {
+    "cases": [
+      "tektronix.afg31000|B|FunctionGeneratorSetWaveform-0",
+      "tektronix.afg31000|B|FunctionGeneratorSetWaveform-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "tektronix.afg31000",
+    "negativeCases": [
+      "tektronix.afg31000|B|FunctionGeneratorSetWaveform-0-transport-failure"
+    ],
+    "operation": "FunctionGeneratorSetWaveform"
   },
   {
     "cases": [
@@ -161,6 +161,20 @@
   },
   {
     "cases": [
+      "tektronix.afg31000|B|Shutdown-0",
+      "tektronix.afg31000|U|unknown-Shutdown",
+      "tektronix.afg31000|B|Shutdown-0-transport-failure"
+    ],
+    "disposition": "explicit-inventory-binding-required",
+    "driver": "tektronix.afg31000",
+    "negativeCases": [
+      "tektronix.afg31000|U|unknown-Shutdown",
+      "tektronix.afg31000|B|Shutdown-0-transport-failure"
+    ],
+    "operation": "Shutdown"
+  },
+  {
+    "cases": [
       "tektronix.fca3100|B|CounterMeasureFrequency-0",
       "tektronix.fca3100|B|CounterMeasureFrequency-0-transport-failure"
     ],
@@ -185,27 +199,15 @@
   },
   {
     "cases": [
-      "tektronix.fca3100|B|CounterSetGateTime-0",
-      "tektronix.fca3100|B|CounterSetGateTime-0-transport-failure"
+      "tektronix.fca3100|B|CounterReadTotalize-0",
+      "tektronix.fca3100|B|CounterReadTotalize-0-transport-failure"
     ],
     "disposition": "implemented-source-derived-no-hardware-evidence",
     "driver": "tektronix.fca3100",
     "negativeCases": [
-      "tektronix.fca3100|B|CounterSetGateTime-0-transport-failure"
+      "tektronix.fca3100|B|CounterReadTotalize-0-transport-failure"
     ],
-    "operation": "CounterSetGateTime"
-  },
-  {
-    "cases": [
-      "tektronix.fca3100|B|CounterSelectChannel-0",
-      "tektronix.fca3100|B|CounterSelectChannel-0-transport-failure"
-    ],
-    "disposition": "implemented-source-derived-no-hardware-evidence",
-    "driver": "tektronix.fca3100",
-    "negativeCases": [
-      "tektronix.fca3100|B|CounterSelectChannel-0-transport-failure"
-    ],
-    "operation": "CounterSelectChannel"
+    "operation": "CounterReadTotalize"
   },
   {
     "cases": [
@@ -221,15 +223,27 @@
   },
   {
     "cases": [
-      "tektronix.fca3100|B|CounterReadTotalize-0",
-      "tektronix.fca3100|B|CounterReadTotalize-0-transport-failure"
+      "tektronix.fca3100|B|CounterSelectChannel-0",
+      "tektronix.fca3100|B|CounterSelectChannel-0-transport-failure"
     ],
     "disposition": "implemented-source-derived-no-hardware-evidence",
     "driver": "tektronix.fca3100",
     "negativeCases": [
-      "tektronix.fca3100|B|CounterReadTotalize-0-transport-failure"
+      "tektronix.fca3100|B|CounterSelectChannel-0-transport-failure"
     ],
-    "operation": "CounterReadTotalize"
+    "operation": "CounterSelectChannel"
+  },
+  {
+    "cases": [
+      "tektronix.fca3100|B|CounterSetGateTime-0",
+      "tektronix.fca3100|B|CounterSetGateTime-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "tektronix.fca3100",
+    "negativeCases": [
+      "tektronix.fca3100|B|CounterSetGateTime-0-transport-failure"
+    ],
+    "operation": "CounterSetGateTime"
   },
   {
     "cases": [
@@ -266,15 +280,39 @@
   },
   {
     "cases": [
-      "tektronix.mdo3024|B|OscilloscopeSetTimebaseScale-0",
-      "tektronix.mdo3024|B|OscilloscopeSetTimebaseScale-0-transport-failure"
+      "tektronix.mdo3024|B|OscilloscopeCaptureVoltageTrace-0",
+      "tektronix.mdo3024|B|OscilloscopeCaptureVoltageTrace-0-transport-failure"
     ],
     "disposition": "implemented-source-derived-no-hardware-evidence",
     "driver": "tektronix.mdo3024",
     "negativeCases": [
-      "tektronix.mdo3024|B|OscilloscopeSetTimebaseScale-0-transport-failure"
+      "tektronix.mdo3024|B|OscilloscopeCaptureVoltageTrace-0-transport-failure"
     ],
-    "operation": "OscilloscopeSetTimebaseScale"
+    "operation": "OscilloscopeCaptureVoltageTrace"
+  },
+  {
+    "cases": [
+      "tektronix.mdo3024|B|OscilloscopeMeasureFrequency-0",
+      "tektronix.mdo3024|B|OscilloscopeMeasureFrequency-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "tektronix.mdo3024",
+    "negativeCases": [
+      "tektronix.mdo3024|B|OscilloscopeMeasureFrequency-0-transport-failure"
+    ],
+    "operation": "OscilloscopeMeasureFrequency"
+  },
+  {
+    "cases": [
+      "tektronix.mdo3024|B|OscilloscopeMeasureVpp-0",
+      "tektronix.mdo3024|B|OscilloscopeMeasureVpp-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "tektronix.mdo3024",
+    "negativeCases": [
+      "tektronix.mdo3024|B|OscilloscopeMeasureVpp-0-transport-failure"
+    ],
+    "operation": "OscilloscopeMeasureVpp"
   },
   {
     "cases": [
@@ -287,6 +325,43 @@
       "tektronix.mdo3024|B|OscilloscopeReadTimebaseScale-0-transport-failure"
     ],
     "operation": "OscilloscopeReadTimebaseScale"
+  },
+  {
+    "cases": [
+      "tektronix.mdo3024|B|OscilloscopeRun-0",
+      "tektronix.mdo3024|B|OscilloscopeRun-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "tektronix.mdo3024",
+    "negativeCases": [
+      "tektronix.mdo3024|B|OscilloscopeRun-0-transport-failure"
+    ],
+    "operation": "OscilloscopeRun"
+  },
+  {
+    "cases": [
+      "tektronix.mdo3024|B|OscilloscopeSetChannelCoupling-0",
+      "tektronix.mdo3024|B|OscilloscopeSetChannelCoupling-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "tektronix.mdo3024",
+    "negativeCases": [
+      "tektronix.mdo3024|B|OscilloscopeSetChannelCoupling-0-transport-failure"
+    ],
+    "operation": "OscilloscopeSetChannelCoupling"
+  },
+  {
+    "cases": [
+      "tektronix.mdo3024|B|OscilloscopeSetChannelDisplay-0",
+      "tektronix.mdo3024|B|OscilloscopeSetChannelDisplay-1",
+      "tektronix.mdo3024|B|OscilloscopeSetChannelDisplay-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "tektronix.mdo3024",
+    "negativeCases": [
+      "tektronix.mdo3024|B|OscilloscopeSetChannelDisplay-0-transport-failure"
+    ],
+    "operation": "OscilloscopeSetChannelDisplay"
   },
   {
     "cases": [
@@ -304,43 +379,15 @@
   },
   {
     "cases": [
-      "tektronix.mdo3024|B|OscilloscopeSetChannelDisplay-0",
-      "tektronix.mdo3024|B|OscilloscopeSetChannelDisplay-1",
-      "tektronix.mdo3024|B|OscilloscopeSetChannelDisplay-0-transport-failure"
+      "tektronix.mdo3024|B|OscilloscopeSetTimebaseScale-0",
+      "tektronix.mdo3024|B|OscilloscopeSetTimebaseScale-0-transport-failure"
     ],
     "disposition": "implemented-source-derived-no-hardware-evidence",
     "driver": "tektronix.mdo3024",
     "negativeCases": [
-      "tektronix.mdo3024|B|OscilloscopeSetChannelDisplay-0-transport-failure"
+      "tektronix.mdo3024|B|OscilloscopeSetTimebaseScale-0-transport-failure"
     ],
-    "operation": "OscilloscopeSetChannelDisplay"
-  },
-  {
-    "cases": [
-      "tektronix.mdo3024|B|OscilloscopeSetChannelCoupling-0",
-      "tektronix.mdo3024|B|OscilloscopeSetChannelCoupling-0-transport-failure"
-    ],
-    "disposition": "implemented-source-derived-no-hardware-evidence",
-    "driver": "tektronix.mdo3024",
-    "negativeCases": [
-      "tektronix.mdo3024|B|OscilloscopeSetChannelCoupling-0-transport-failure"
-    ],
-    "operation": "OscilloscopeSetChannelCoupling"
-  },
-  {
-    "cases": [
-      "tektronix.mdo3024|B|OscilloscopeSetTriggerSource-0",
-      "tektronix.mdo3024|B|OscilloscopeSetTriggerSource-0-transport-failure",
-      "tektronix.mdo3024|B|bound-source-CHAN3",
-      "tektronix.mdo3024|B|bound-source-CHAN2"
-    ],
-    "disposition": "implemented-source-derived-no-hardware-evidence",
-    "driver": "tektronix.mdo3024",
-    "negativeCases": [
-      "tektronix.mdo3024|B|OscilloscopeSetTriggerSource-0-transport-failure",
-      "tektronix.mdo3024|B|bound-source-CHAN2"
-    ],
-    "operation": "OscilloscopeSetTriggerSource"
+    "operation": "OscilloscopeSetTimebaseScale"
   },
   {
     "cases": [
@@ -368,27 +415,18 @@
   },
   {
     "cases": [
-      "tektronix.mdo3024|B|OscilloscopeRun-0",
-      "tektronix.mdo3024|B|OscilloscopeRun-0-transport-failure"
+      "tektronix.mdo3024|B|OscilloscopeSetTriggerSource-0",
+      "tektronix.mdo3024|B|OscilloscopeSetTriggerSource-0-transport-failure",
+      "tektronix.mdo3024|B|bound-source-CHAN3",
+      "tektronix.mdo3024|B|bound-source-CHAN2"
     ],
     "disposition": "implemented-source-derived-no-hardware-evidence",
     "driver": "tektronix.mdo3024",
     "negativeCases": [
-      "tektronix.mdo3024|B|OscilloscopeRun-0-transport-failure"
+      "tektronix.mdo3024|B|OscilloscopeSetTriggerSource-0-transport-failure",
+      "tektronix.mdo3024|B|bound-source-CHAN2"
     ],
-    "operation": "OscilloscopeRun"
-  },
-  {
-    "cases": [
-      "tektronix.mdo3024|B|OscilloscopeStop-0",
-      "tektronix.mdo3024|B|OscilloscopeStop-0-transport-failure"
-    ],
-    "disposition": "implemented-source-derived-no-hardware-evidence",
-    "driver": "tektronix.mdo3024",
-    "negativeCases": [
-      "tektronix.mdo3024|B|OscilloscopeStop-0-transport-failure"
-    ],
-    "operation": "OscilloscopeStop"
+    "operation": "OscilloscopeSetTriggerSource"
   },
   {
     "cases": [
@@ -404,39 +442,15 @@
   },
   {
     "cases": [
-      "tektronix.mdo3024|B|OscilloscopeMeasureVpp-0",
-      "tektronix.mdo3024|B|OscilloscopeMeasureVpp-0-transport-failure"
+      "tektronix.mdo3024|B|OscilloscopeStop-0",
+      "tektronix.mdo3024|B|OscilloscopeStop-0-transport-failure"
     ],
     "disposition": "implemented-source-derived-no-hardware-evidence",
     "driver": "tektronix.mdo3024",
     "negativeCases": [
-      "tektronix.mdo3024|B|OscilloscopeMeasureVpp-0-transport-failure"
+      "tektronix.mdo3024|B|OscilloscopeStop-0-transport-failure"
     ],
-    "operation": "OscilloscopeMeasureVpp"
-  },
-  {
-    "cases": [
-      "tektronix.mdo3024|B|OscilloscopeMeasureFrequency-0",
-      "tektronix.mdo3024|B|OscilloscopeMeasureFrequency-0-transport-failure"
-    ],
-    "disposition": "implemented-source-derived-no-hardware-evidence",
-    "driver": "tektronix.mdo3024",
-    "negativeCases": [
-      "tektronix.mdo3024|B|OscilloscopeMeasureFrequency-0-transport-failure"
-    ],
-    "operation": "OscilloscopeMeasureFrequency"
-  },
-  {
-    "cases": [
-      "tektronix.mdo3024|B|OscilloscopeCaptureVoltageTrace-0",
-      "tektronix.mdo3024|B|OscilloscopeCaptureVoltageTrace-0-transport-failure"
-    ],
-    "disposition": "implemented-source-derived-no-hardware-evidence",
-    "driver": "tektronix.mdo3024",
-    "negativeCases": [
-      "tektronix.mdo3024|B|OscilloscopeCaptureVoltageTrace-0-transport-failure"
-    ],
-    "operation": "OscilloscopeCaptureVoltageTrace"
+    "operation": "OscilloscopeStop"
   },
   {
     "cases": [
@@ -476,63 +490,39 @@
   },
   {
     "cases": [
-      "tektronix.rsa306b|B|SpectrumAnalyzerSetCenterFrequency-0",
-      "tektronix.rsa306b|B|SpectrumAnalyzerSetCenterFrequency-0-transport-failure"
+      "tektronix.rsa306b|B|QueryIdentity-0",
+      "tektronix.rsa306b|B|QueryIdentity-0-transport-failure"
     ],
     "disposition": "implemented-source-derived-no-hardware-evidence",
     "driver": "tektronix.rsa306b",
     "negativeCases": [
-      "tektronix.rsa306b|B|SpectrumAnalyzerSetCenterFrequency-0-transport-failure"
+      "tektronix.rsa306b|B|QueryIdentity-0-transport-failure"
     ],
-    "operation": "SpectrumAnalyzerSetCenterFrequency"
+    "operation": "QueryIdentity"
   },
   {
     "cases": [
-      "tektronix.rsa306b|B|SpectrumAnalyzerSetSpan-0",
-      "tektronix.rsa306b|B|SpectrumAnalyzerSetSpan-0-transport-failure"
+      "tektronix.rsa306b|B|Reset-0",
+      "tektronix.rsa306b|B|Reset-0-transport-failure"
     ],
     "disposition": "implemented-source-derived-no-hardware-evidence",
     "driver": "tektronix.rsa306b",
     "negativeCases": [
-      "tektronix.rsa306b|B|SpectrumAnalyzerSetSpan-0-transport-failure"
+      "tektronix.rsa306b|B|Reset-0-transport-failure"
     ],
-    "operation": "SpectrumAnalyzerSetSpan"
+    "operation": "Reset"
   },
   {
     "cases": [
-      "tektronix.rsa306b|B|SpectrumAnalyzerSetRbw-0",
-      "tektronix.rsa306b|B|SpectrumAnalyzerSetRbw-0-transport-failure"
+      "tektronix.rsa306b|B|Shutdown-0",
+      "tektronix.rsa306b|B|Shutdown-0-transport-failure"
     ],
     "disposition": "implemented-source-derived-no-hardware-evidence",
     "driver": "tektronix.rsa306b",
     "negativeCases": [
-      "tektronix.rsa306b|B|SpectrumAnalyzerSetRbw-0-transport-failure"
+      "tektronix.rsa306b|B|Shutdown-0-transport-failure"
     ],
-    "operation": "SpectrumAnalyzerSetRbw"
-  },
-  {
-    "cases": [
-      "tektronix.rsa306b|B|SpectrumAnalyzerSetVbw-0",
-      "tektronix.rsa306b|B|SpectrumAnalyzerSetVbw-0-transport-failure"
-    ],
-    "disposition": "implemented-source-derived-no-hardware-evidence",
-    "driver": "tektronix.rsa306b",
-    "negativeCases": [
-      "tektronix.rsa306b|B|SpectrumAnalyzerSetVbw-0-transport-failure"
-    ],
-    "operation": "SpectrumAnalyzerSetVbw"
-  },
-  {
-    "cases": [
-      "tektronix.rsa306b|B|SpectrumAnalyzerSetRefLevel-0",
-      "tektronix.rsa306b|B|SpectrumAnalyzerSetRefLevel-0-transport-failure"
-    ],
-    "disposition": "implemented-source-derived-no-hardware-evidence",
-    "driver": "tektronix.rsa306b",
-    "negativeCases": [
-      "tektronix.rsa306b|B|SpectrumAnalyzerSetRefLevel-0-transport-failure"
-    ],
-    "operation": "SpectrumAnalyzerSetRefLevel"
+    "operation": "Shutdown"
   },
   {
     "cases": [
@@ -584,16 +574,63 @@
   },
   {
     "cases": [
-      "tektronix.rsa306b|B|SpectrumAnalyzerSweepContinuous-0",
-      "tektronix.rsa306b|B|SpectrumAnalyzerSweepContinuous-1",
-      "tektronix.rsa306b|B|SpectrumAnalyzerSweepContinuous-0-transport-failure"
+      "tektronix.rsa306b|B|SpectrumAnalyzerSetCenterFrequency-0",
+      "tektronix.rsa306b|B|SpectrumAnalyzerSetCenterFrequency-0-transport-failure"
     ],
     "disposition": "implemented-source-derived-no-hardware-evidence",
     "driver": "tektronix.rsa306b",
     "negativeCases": [
-      "tektronix.rsa306b|B|SpectrumAnalyzerSweepContinuous-0-transport-failure"
+      "tektronix.rsa306b|B|SpectrumAnalyzerSetCenterFrequency-0-transport-failure"
     ],
-    "operation": "SpectrumAnalyzerSweepContinuous"
+    "operation": "SpectrumAnalyzerSetCenterFrequency"
+  },
+  {
+    "cases": [
+      "tektronix.rsa306b|B|SpectrumAnalyzerSetRbw-0",
+      "tektronix.rsa306b|B|SpectrumAnalyzerSetRbw-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "tektronix.rsa306b",
+    "negativeCases": [
+      "tektronix.rsa306b|B|SpectrumAnalyzerSetRbw-0-transport-failure"
+    ],
+    "operation": "SpectrumAnalyzerSetRbw"
+  },
+  {
+    "cases": [
+      "tektronix.rsa306b|B|SpectrumAnalyzerSetRefLevel-0",
+      "tektronix.rsa306b|B|SpectrumAnalyzerSetRefLevel-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "tektronix.rsa306b",
+    "negativeCases": [
+      "tektronix.rsa306b|B|SpectrumAnalyzerSetRefLevel-0-transport-failure"
+    ],
+    "operation": "SpectrumAnalyzerSetRefLevel"
+  },
+  {
+    "cases": [
+      "tektronix.rsa306b|B|SpectrumAnalyzerSetSpan-0",
+      "tektronix.rsa306b|B|SpectrumAnalyzerSetSpan-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "tektronix.rsa306b",
+    "negativeCases": [
+      "tektronix.rsa306b|B|SpectrumAnalyzerSetSpan-0-transport-failure"
+    ],
+    "operation": "SpectrumAnalyzerSetSpan"
+  },
+  {
+    "cases": [
+      "tektronix.rsa306b|B|SpectrumAnalyzerSetVbw-0",
+      "tektronix.rsa306b|B|SpectrumAnalyzerSetVbw-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "tektronix.rsa306b",
+    "negativeCases": [
+      "tektronix.rsa306b|B|SpectrumAnalyzerSetVbw-0-transport-failure"
+    ],
+    "operation": "SpectrumAnalyzerSetVbw"
   },
   {
     "cases": [
@@ -609,6 +646,19 @@
   },
   {
     "cases": [
+      "tektronix.rsa306b|B|SpectrumAnalyzerSweepContinuous-0",
+      "tektronix.rsa306b|B|SpectrumAnalyzerSweepContinuous-1",
+      "tektronix.rsa306b|B|SpectrumAnalyzerSweepContinuous-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "tektronix.rsa306b",
+    "negativeCases": [
+      "tektronix.rsa306b|B|SpectrumAnalyzerSweepContinuous-0-transport-failure"
+    ],
+    "operation": "SpectrumAnalyzerSweepContinuous"
+  },
+  {
+    "cases": [
       "tektronix.rsa306b|B|SpectrumAnalyzerWaitOpc-0",
       "tektronix.rsa306b|B|SpectrumAnalyzerWaitOpc-0-transport-failure"
     ],
@@ -618,41 +668,5 @@
       "tektronix.rsa306b|B|SpectrumAnalyzerWaitOpc-0-transport-failure"
     ],
     "operation": "SpectrumAnalyzerWaitOpc"
-  },
-  {
-    "cases": [
-      "tektronix.rsa306b|B|QueryIdentity-0",
-      "tektronix.rsa306b|B|QueryIdentity-0-transport-failure"
-    ],
-    "disposition": "implemented-source-derived-no-hardware-evidence",
-    "driver": "tektronix.rsa306b",
-    "negativeCases": [
-      "tektronix.rsa306b|B|QueryIdentity-0-transport-failure"
-    ],
-    "operation": "QueryIdentity"
-  },
-  {
-    "cases": [
-      "tektronix.rsa306b|B|Reset-0",
-      "tektronix.rsa306b|B|Reset-0-transport-failure"
-    ],
-    "disposition": "implemented-source-derived-no-hardware-evidence",
-    "driver": "tektronix.rsa306b",
-    "negativeCases": [
-      "tektronix.rsa306b|B|Reset-0-transport-failure"
-    ],
-    "operation": "Reset"
-  },
-  {
-    "cases": [
-      "tektronix.rsa306b|B|Shutdown-0",
-      "tektronix.rsa306b|B|Shutdown-0-transport-failure"
-    ],
-    "disposition": "implemented-source-derived-no-hardware-evidence",
-    "driver": "tektronix.rsa306b",
-    "negativeCases": [
-      "tektronix.rsa306b|B|Shutdown-0-transport-failure"
-    ],
-    "operation": "Shutdown"
   }
 ]
