@@ -1,0 +1,321 @@
+{
+  "schemaVersion": 1,
+  "artifacts": [
+    {
+      "artifact": {
+        "id": 14072355582,
+        "name": "driver-proof-ubuntu-latest-net8.0",
+        "digest": "sha256:dfb7d4bcf8319ea42d1c818a210db7fc55fd1e85a3f697438487396f59d97f4a",
+        "size_in_bytes": 10028305
+      },
+      "verifiedZipSha256": "dfb7d4bcf8319ea42d1c818a210db7fc55fd1e85a3f697438487396f59d97f4a",
+      "phaseCount": 21,
+      "casesPerFrontend": 452,
+      "binaries": [
+        {
+          "mode": "generated",
+          "rid": "linux-x64",
+          "framework": "net8.0",
+          "sha256": "e70a1fb7ac07e5e3a0ce6e0811c0bff1d46c20713271ccb870b3ad3f9fca1b1a",
+          "executed": true,
+          "bytes": 4451360,
+          "nativeFormatVerified": true
+        },
+        {
+          "mode": "packed",
+          "rid": "linux-x64",
+          "framework": "net8.0",
+          "sha256": "0f4d5d35aacd3daa736b9621d48477ea795cfdb657b9aa2a13ab85daa25cbd9d",
+          "executed": true,
+          "bytes": 4451360,
+          "nativeFormatVerified": true
+        }
+      ],
+      "packages": [
+        {
+          "package": "instrument-driver-tektronix",
+          "file": "instrument-driver-tektronix-0.2.0-alpha.1.crate",
+          "sha256": "dba9b84510ae3d6126b0a6b77b60c0c09bf0802ff1821544f28b6eb4d7fd8208",
+          "bytes": 19326,
+          "members": [
+            "instrument-driver-tektronix-0.2.0-alpha.1/Cargo.lock",
+            "instrument-driver-tektronix-0.2.0-alpha.1/Cargo.toml",
+            "instrument-driver-tektronix-0.2.0-alpha.1/Cargo.toml.orig",
+            "instrument-driver-tektronix-0.2.0-alpha.1/LICENSE-APACHE",
+            "instrument-driver-tektronix-0.2.0-alpha.1/LICENSE-MIT",
+            "instrument-driver-tektronix-0.2.0-alpha.1/README.md",
+            "instrument-driver-tektronix-0.2.0-alpha.1/generated/profiles.rs",
+            "instrument-driver-tektronix-0.2.0-alpha.1/src/lib.rs",
+            "instrument-driver-tektronix-0.2.0-alpha.1/src/message_backend.rs",
+            "instrument-driver-tektronix-0.2.0-alpha.1/src/tds1002.rs"
+          ]
+        },
+        {
+          "package": "InstrumentComponents.Drivers.Tektronix",
+          "file": "InstrumentComponents.Drivers.Tektronix.0.2.0-alpha.1.nupkg",
+          "sha256": "c7903e438d664be28558120a88f42f5c4c54fa42b74880ae5cda2eab6f10db80",
+          "bytes": 26856,
+          "members": [
+            "_rels/.rels",
+            "InstrumentComponents.Drivers.Tektronix.nuspec",
+            "README.md",
+            "lib/net8.0/InstrumentComponents.Drivers.Tektronix.dll",
+            "[Content_Types].xml",
+            "package/services/metadata/core-properties/nuget.psmdcp"
+          ]
+        }
+      ],
+      "sdkPackages": {
+        "cargo-dependencies": "b1c089e7990375f6f9e3cceccf6d36412ef6ca30954330e82a7c12be8ee4d492",
+        "instrument-api": "17dd560ec49c711d5f06e4583541ad0b1419261cc1a78a93224ba8f9e89aa3b9",
+        "instrument-runtime": "b70d7424ce8cc8ddf903a1b1f070e125989265fac718d3a42a51ad7632c2c57a",
+        "instrument-scpi": "2821a21ec2178e3d4fe911911828e50b27081110fa2a89f97ba420f8745697fb",
+        "instrument-testkit": "ccb68492b606851ca34a173e3f75aa04c380ea8b378aca978fdaa29164e1a511",
+        "instrument-components": "4ca73da408fd6e10e44715102c1b1a0339406aa177561b0e95b8326b761a7419",
+        "InstrumentComponents": "c556f63bd7c022d714f710ef7af365be0ecd15d7e7d8510a83cb517988c05d10",
+        "InstrumentComponents.Abstractions": "e2707d5cbec1ba7fd7b5383a04dcb70f6d759346333faf3993cd8af25838a9a0",
+        "InstrumentComponents.Runtime": "4186ded2583d9b97132f43490c47f909b8bfc82a42519fa7812e9f91082de24f",
+        "InstrumentComponents.Scpi": "321c27bb2efec3f24432c66adf03d5febdbc43f8a9b3284fe4c170c3c48e6c52",
+        "InstrumentComponents.TestKit": "e32c859388742d532a886beef60c91678dc86e37850cbbb9c7fec19860aa9c20",
+        "instrument-driver-tools": "0ddee4d33663ca2f4f0f74886fa095aa82e207a0853c792c01e708cfd2a163ad"
+      }
+    },
+    {
+      "artifact": {
+        "id": 14072301199,
+        "name": "driver-proof-windows-latest-net10.0",
+        "digest": "sha256:bb3ec305f3c39d4a2f91e101e28eb8d31098e544c75f6100b26bb9601992db3d",
+        "size_in_bytes": 9877771
+      },
+      "verifiedZipSha256": "bb3ec305f3c39d4a2f91e101e28eb8d31098e544c75f6100b26bb9601992db3d",
+      "phaseCount": 19,
+      "casesPerFrontend": 452,
+      "binaries": [
+        {
+          "mode": "generated",
+          "rid": "win-x64",
+          "framework": "net10.0",
+          "sha256": "9b8216d4b3d6906f33bf05a495bfd304bd82bcde941a196e11aa438c10839adf",
+          "executed": true,
+          "bytes": 3568640,
+          "nativeFormatVerified": true
+        },
+        {
+          "mode": "packed",
+          "rid": "win-x64",
+          "framework": "net10.0",
+          "sha256": "26e5ab4892710fc085efc8a513d581f72af8cdeafada202d4785476739b4b18d",
+          "executed": true,
+          "bytes": 3568640,
+          "nativeFormatVerified": true
+        }
+      ],
+      "packages": [
+        {
+          "package": "instrument-driver-tektronix",
+          "file": "instrument-driver-tektronix-0.2.0-alpha.1.crate",
+          "sha256": "30ab1a8370959477ffb758cdbceefff5ca74a6b6b352157d9dbc23b60e5bdffa",
+          "bytes": 19413,
+          "members": [
+            "instrument-driver-tektronix-0.2.0-alpha.1/Cargo.lock",
+            "instrument-driver-tektronix-0.2.0-alpha.1/Cargo.toml",
+            "instrument-driver-tektronix-0.2.0-alpha.1/Cargo.toml.orig",
+            "instrument-driver-tektronix-0.2.0-alpha.1/LICENSE-APACHE",
+            "instrument-driver-tektronix-0.2.0-alpha.1/LICENSE-MIT",
+            "instrument-driver-tektronix-0.2.0-alpha.1/README.md",
+            "instrument-driver-tektronix-0.2.0-alpha.1/generated/profiles.rs",
+            "instrument-driver-tektronix-0.2.0-alpha.1/src/lib.rs",
+            "instrument-driver-tektronix-0.2.0-alpha.1/src/message_backend.rs",
+            "instrument-driver-tektronix-0.2.0-alpha.1/src/tds1002.rs"
+          ]
+        },
+        {
+          "package": "InstrumentComponents.Drivers.Tektronix",
+          "file": "InstrumentComponents.Drivers.Tektronix.0.2.0-alpha.1.nupkg",
+          "sha256": "5cb0b5e2a914947ef07789582f7d8fc887980be1510aafc579562c8ad540433e",
+          "bytes": 26990,
+          "members": [
+            "_rels/.rels",
+            "InstrumentComponents.Drivers.Tektronix.nuspec",
+            "README.md",
+            "lib/net8.0/InstrumentComponents.Drivers.Tektronix.dll",
+            "[Content_Types].xml",
+            "package/services/metadata/core-properties/nuget.psmdcp"
+          ]
+        }
+      ],
+      "sdkPackages": {
+        "cargo-dependencies": "b413079a06df74dfd8c401fed72fc6a930dda778ac2bef1d3a516924ae3a7a7f",
+        "instrument-api": "0a15df0420cfd621a62210442bffd2934105158adbb804a032d31070861125f7",
+        "instrument-runtime": "f18d3f575f961a87108e96c759799c8e6bc3bc327e46bc609af22f638fd2468e",
+        "instrument-scpi": "da86c57874ce56f546055317670898d963fbb6cfd390a53a8c39f05574adb2bb",
+        "instrument-testkit": "ac7fd54b7cdad8aa70a1c5da496857484badf73ca73d1abf40c708cdd6d52fe0",
+        "instrument-components": "34784a8e991f9183c8570fd7740510717716b7ddd1514384ced7a907513235c5",
+        "InstrumentComponents": "6b21c88d275a83f9ffe659a64005d379244fd033e215194d7e50010097a86b7b",
+        "InstrumentComponents.Abstractions": "027bacdbec889e4cfee46d9792c2629a99b8c3356ae4c91eb6c177833a972f30",
+        "InstrumentComponents.Runtime": "a5c2101c6040433d48bac7fa8cc715d889405d688c471e65aefa29afa7e59538",
+        "InstrumentComponents.Scpi": "d38afb4ae64369b17d6089aedcae7a9ee307d11e351ca2140eb2a0760a050cf5",
+        "InstrumentComponents.TestKit": "68805210b770102be9d22102835b61120b13441836cc3f5e10e6c29933e7f27b",
+        "instrument-driver-tools": "376802d9d143ab8af2ac39d60f50c0e49d35f5c98330e1f049aa36d15008bdb4"
+      }
+    },
+    {
+      "artifact": {
+        "id": 14071877997,
+        "name": "driver-proof-ubuntu-latest-net10.0",
+        "digest": "sha256:d102b287937086f9c29e73788c3fba60ea134a53fa6458307c926d3e539414a4",
+        "size_in_bytes": 9380033
+      },
+      "verifiedZipSha256": "d102b287937086f9c29e73788c3fba60ea134a53fa6458307c926d3e539414a4",
+      "phaseCount": 21,
+      "casesPerFrontend": 452,
+      "binaries": [
+        {
+          "mode": "generated",
+          "rid": "linux-x64",
+          "framework": "net10.0",
+          "sha256": "b595ae4830ff8bd45bd5690c6719f8b7c61ea092d870be85290a9bfb8cf78d06",
+          "executed": true,
+          "bytes": 3547216,
+          "nativeFormatVerified": true
+        },
+        {
+          "mode": "packed",
+          "rid": "linux-x64",
+          "framework": "net10.0",
+          "sha256": "a5610a21ade986b844706166d8d2d3883c488ee967c441ee4f974e12e6ca3b78",
+          "executed": true,
+          "bytes": 3547216,
+          "nativeFormatVerified": true
+        }
+      ],
+      "packages": [
+        {
+          "package": "instrument-driver-tektronix",
+          "file": "instrument-driver-tektronix-0.2.0-alpha.1.crate",
+          "sha256": "dba9b84510ae3d6126b0a6b77b60c0c09bf0802ff1821544f28b6eb4d7fd8208",
+          "bytes": 19326,
+          "members": [
+            "instrument-driver-tektronix-0.2.0-alpha.1/Cargo.lock",
+            "instrument-driver-tektronix-0.2.0-alpha.1/Cargo.toml",
+            "instrument-driver-tektronix-0.2.0-alpha.1/Cargo.toml.orig",
+            "instrument-driver-tektronix-0.2.0-alpha.1/LICENSE-APACHE",
+            "instrument-driver-tektronix-0.2.0-alpha.1/LICENSE-MIT",
+            "instrument-driver-tektronix-0.2.0-alpha.1/README.md",
+            "instrument-driver-tektronix-0.2.0-alpha.1/generated/profiles.rs",
+            "instrument-driver-tektronix-0.2.0-alpha.1/src/lib.rs",
+            "instrument-driver-tektronix-0.2.0-alpha.1/src/message_backend.rs",
+            "instrument-driver-tektronix-0.2.0-alpha.1/src/tds1002.rs"
+          ]
+        },
+        {
+          "package": "InstrumentComponents.Drivers.Tektronix",
+          "file": "InstrumentComponents.Drivers.Tektronix.0.2.0-alpha.1.nupkg",
+          "sha256": "17a1e2f5284e4cdbfd0c5efd5fafaf17083e2f116762adc74a4b568a94fdc74c",
+          "bytes": 26853,
+          "members": [
+            "_rels/.rels",
+            "InstrumentComponents.Drivers.Tektronix.nuspec",
+            "README.md",
+            "lib/net8.0/InstrumentComponents.Drivers.Tektronix.dll",
+            "[Content_Types].xml",
+            "package/services/metadata/core-properties/nuget.psmdcp"
+          ]
+        }
+      ],
+      "sdkPackages": {
+        "cargo-dependencies": "3ac27c029d035ee6ecef38ac390a6848fb8ac278e538558d5284fb43b0bf70e3",
+        "instrument-api": "17dd560ec49c711d5f06e4583541ad0b1419261cc1a78a93224ba8f9e89aa3b9",
+        "instrument-runtime": "b70d7424ce8cc8ddf903a1b1f070e125989265fac718d3a42a51ad7632c2c57a",
+        "instrument-scpi": "2821a21ec2178e3d4fe911911828e50b27081110fa2a89f97ba420f8745697fb",
+        "instrument-testkit": "ccb68492b606851ca34a173e3f75aa04c380ea8b378aca978fdaa29164e1a511",
+        "instrument-components": "4ca73da408fd6e10e44715102c1b1a0339406aa177561b0e95b8326b761a7419",
+        "InstrumentComponents": "86fa34cb071b0610d8d892e7c4b7010c2c609a3589f24101b0fa3f5d9f4b6059",
+        "InstrumentComponents.Abstractions": "1faab4c1cbc881c3f0936be70130b353fe3666e33297754d0d8b932598786ebc",
+        "InstrumentComponents.Runtime": "1b0b2b897726f035b14e82723395c10fc217060b9783c201008f3a241dba8508",
+        "InstrumentComponents.Scpi": "4361c5fde66f10c339f689c997de66316ae2984a365dd0a5251dd2fa070da8a8",
+        "InstrumentComponents.TestKit": "bb37d09c975db648c0ce7a5ffdb05a7c131b2d4156e42bed88d909f705c2b0df",
+        "instrument-driver-tools": "f18ca57a8612d9b5c8e03b142f79e6eaa45e2253dfd54030049fbe0f6aceb4e8"
+      }
+    },
+    {
+      "artifact": {
+        "id": 14071474003,
+        "name": "driver-proof-windows-latest-net8.0",
+        "digest": "sha256:aa8a631d547117c01563fb676ea552246ec747470ea166effe52b69b38958235",
+        "size_in_bytes": 11934493
+      },
+      "verifiedZipSha256": "aa8a631d547117c01563fb676ea552246ec747470ea166effe52b69b38958235",
+      "phaseCount": 19,
+      "casesPerFrontend": 452,
+      "binaries": [
+        {
+          "mode": "generated",
+          "rid": "win-x64",
+          "framework": "net8.0",
+          "sha256": "46820a6202288c36159d9bc6974b6f8051f8851ab02c2a47fe3362a1f5d9cc4c",
+          "executed": true,
+          "bytes": 3996672,
+          "nativeFormatVerified": true
+        },
+        {
+          "mode": "packed",
+          "rid": "win-x64",
+          "framework": "net8.0",
+          "sha256": "8a3789d63f2283d99ed032fcb04bae718f35a1e684080685223295558f1a41c1",
+          "executed": true,
+          "bytes": 3996672,
+          "nativeFormatVerified": true
+        }
+      ],
+      "packages": [
+        {
+          "package": "instrument-driver-tektronix",
+          "file": "instrument-driver-tektronix-0.2.0-alpha.1.crate",
+          "sha256": "30ab1a8370959477ffb758cdbceefff5ca74a6b6b352157d9dbc23b60e5bdffa",
+          "bytes": 19413,
+          "members": [
+            "instrument-driver-tektronix-0.2.0-alpha.1/Cargo.lock",
+            "instrument-driver-tektronix-0.2.0-alpha.1/Cargo.toml",
+            "instrument-driver-tektronix-0.2.0-alpha.1/Cargo.toml.orig",
+            "instrument-driver-tektronix-0.2.0-alpha.1/LICENSE-APACHE",
+            "instrument-driver-tektronix-0.2.0-alpha.1/LICENSE-MIT",
+            "instrument-driver-tektronix-0.2.0-alpha.1/README.md",
+            "instrument-driver-tektronix-0.2.0-alpha.1/generated/profiles.rs",
+            "instrument-driver-tektronix-0.2.0-alpha.1/src/lib.rs",
+            "instrument-driver-tektronix-0.2.0-alpha.1/src/message_backend.rs",
+            "instrument-driver-tektronix-0.2.0-alpha.1/src/tds1002.rs"
+          ]
+        },
+        {
+          "package": "InstrumentComponents.Drivers.Tektronix",
+          "file": "InstrumentComponents.Drivers.Tektronix.0.2.0-alpha.1.nupkg",
+          "sha256": "9c47203dbd026615f99259869410acf4f86585bfeeb0207f134c8a1573a423e9",
+          "bytes": 26993,
+          "members": [
+            "_rels/.rels",
+            "InstrumentComponents.Drivers.Tektronix.nuspec",
+            "README.md",
+            "lib/net8.0/InstrumentComponents.Drivers.Tektronix.dll",
+            "[Content_Types].xml",
+            "package/services/metadata/core-properties/nuget.psmdcp"
+          ]
+        }
+      ],
+      "sdkPackages": {
+        "cargo-dependencies": "923b5fd485bd3562d381cb7045e3cc19bd57fe9a6f45ff55db62ed9da2914037",
+        "instrument-api": "0a15df0420cfd621a62210442bffd2934105158adbb804a032d31070861125f7",
+        "instrument-runtime": "f18d3f575f961a87108e96c759799c8e6bc3bc327e46bc609af22f638fd2468e",
+        "instrument-scpi": "da86c57874ce56f546055317670898d963fbb6cfd390a53a8c39f05574adb2bb",
+        "instrument-testkit": "ac7fd54b7cdad8aa70a1c5da496857484badf73ca73d1abf40c708cdd6d52fe0",
+        "instrument-components": "34784a8e991f9183c8570fd7740510717716b7ddd1514384ced7a907513235c5",
+        "InstrumentComponents": "2a680f925c6786cb30ec5b11890958ee6d84837da73ec6706a120d8f44eea4f8",
+        "InstrumentComponents.Abstractions": "4842416d7552e3fe94cb3c3a67e8fb6ab757da7a4ccbcf764089fca1df158963",
+        "InstrumentComponents.Runtime": "7f28f0f0725de127917f7b5d53fa9d827e5b1e0cad76a794c96806016065c7b9",
+        "InstrumentComponents.Scpi": "fe8ef4056397bcb9c0a049c43cfa83c817f6aa03367bb39808d7debfd1da4337",
+        "InstrumentComponents.TestKit": "a390c5debfd82e772ee163aab0336d1a5dd7ededf2c8c930c520fd3df4999251",
+        "instrument-driver-tools": "e0666929ec3b7ff069ad8f7bacdd531c4f485c0e9f358bda5745ae673b727d75"
+      }
+    }
+  ]
+}

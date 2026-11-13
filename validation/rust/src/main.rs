@@ -8,6 +8,11 @@ use std::{
     sync::Arc,
 };
 include!("../../../generated/cases.rs");
+mod tds_examples;
+mod tds_fixture;
+#[cfg(feature = "async")]
+mod tds_pending_proof;
+mod tds_proof;
 fn bindings() -> Result<BTreeMap<String, InventoryBinding>> {
     Ok(driver::profiles()?
         .into_iter()
@@ -134,14 +139,21 @@ fn identities() -> Result<()> {
     Ok(())
 }
 fn synchronous() -> Result<()> {
+    tds_examples::run()?;
+    tds_proof::run()?;
     identities()?;
     for case in generated_cases::cases() {
         let script = Script::new(case.script.clone());
-        let registry = DriverRegistry::new(driver::sync_factories_for_connections(
-            Arc::new(script.clone()),
-            &BTreeMap::new(),
-            &connections_for(&case)?,
-        )?)?;
+        let factories = if case.id.starts_with("tektronix.tds1002|") {
+            vec![tds_fixture::factory(&script, false)?]
+        } else {
+            driver::sync_factories_for_connections(
+                Arc::new(script.clone()),
+                &BTreeMap::new(),
+                &connections_for(&case)?,
+            )?
+        };
+        let registry = DriverRegistry::new(factories)?;
         let h = registry.open(
             &candidate(),
             &selection(case.id),
@@ -168,10 +180,14 @@ fn synchronous() -> Result<()> {
 }
 #[cfg(feature = "async")]
 async fn asynchronous() -> Result<()> {
+    tds_proof::admission_async().await?;
+    tds_pending_proof::run().await?;
     for mode in 0..3 {
         for case in generated_cases::cases() {
             let script = Script::new(case.script.clone());
-            let factories = if mode == 0 {
+            let factories = if case.id.starts_with("tektronix.tds1002|") {
+                vec![tds_fixture::factory(&script, mode == 0)?]
+            } else if mode == 0 {
                 driver::native_factories_for_connections(
                     Arc::new(script.clone()),
                     &BTreeMap::new(),
@@ -252,6 +268,7 @@ fn main() -> Result<()> {
     synchronous()?;
     #[cfg(feature = "async")]
     tokio::runtime::Builder::new_current_thread()
+        .enable_time()
         .build()
         .unwrap()
         .block_on(asynchronous())?;

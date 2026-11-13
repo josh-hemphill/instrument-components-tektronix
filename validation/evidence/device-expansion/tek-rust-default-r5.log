@@ -1,0 +1,11 @@
+   Compiling instrument-api v0.2.0-alpha.1 (/workspace/instrument-components/crates/instrument-api)
+   Compiling instrument-scpi v0.2.0-alpha.1 (/workspace/instrument-components/crates/instrument-scpi)
+   Compiling instrument-runtime v0.2.0-alpha.1 (/workspace/instrument-components/crates/instrument-runtime)
+   Compiling instrument-driver-tektronix v0.2.0-alpha.1 (/workspace/scratch/instrument-components-expansion-20261113/tek-source-r5)
+   Compiling instrument-testkit v0.2.0-alpha.1 (/workspace/instrument-components/crates/instrument-testkit)
+   Compiling tektronix-package-proof v0.0.0 (/workspace/scratch/instrument-components-expansion-20261113/tek-source-r5/validation/rust)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 4.66s
+     Running `/workspace/scratch/instrument-components-expansion-20261113/tek-target/debug/tektronix-package-proof`
+PASS compiled TDS1002 static composition example and five typed scope calls
+PASS TDS1002 actual-factory admission,4096 bounds, immutable bindings, all error health follow-ups, nonfinite usable rejection, ownership and all probe grids
+PASS Tektronix package: 452 independent cases; exact traffic, values, units, errors and resource lifetime

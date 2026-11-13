@@ -1,0 +1,689 @@
+{
+  "schemaVersion": 1,
+  "artifacts": [
+    {
+      "artifact": {
+        "id": 14072011787,
+        "name": "driver-sdk-windows-latest-net8.0",
+        "digest": "sha256:dccc0861a20ef761e61eb481bc77c8e607e217e2fb104acb1179fe264d1f5aec",
+        "size_in_bytes": 13595171
+      },
+      "verifiedZipSha256": "dccc0861a20ef761e61eb481bc77c8e607e217e2fb104acb1179fe264d1f5aec",
+      "platform": {
+        "rid": "win-x64",
+        "framework": "net8.0",
+        "nativeExecuted": true,
+        "isolationExecuted": false,
+        "binary": "D:\\a\\_temp\\sdk-net8.0\\native\\AotConsumer.exe",
+        "sha256": "98192ae54d779e6a299230024bfd354d56bc13e23ba733420e6ea9b27aa0ab24"
+      },
+      "nativeFormatVerified": true,
+      "phaseCount": 45,
+      "packages": [
+        {
+          "package": "instrument-api",
+          "sha256": "0a15df0420cfd621a62210442bffd2934105158adbb804a032d31070861125f7",
+          "productionDependencies": [],
+          "members": [
+            "instrument-api-0.2.0-alpha.1/Cargo.lock",
+            "instrument-api-0.2.0-alpha.1/Cargo.toml",
+            "instrument-api-0.2.0-alpha.1/Cargo.toml.orig",
+            "instrument-api-0.2.0-alpha.1/src/asynchronous.rs",
+            "instrument-api-0.2.0-alpha.1/src/catalog.rs",
+            "instrument-api-0.2.0-alpha.1/src/catalog_generated.rs",
+            "instrument-api-0.2.0-alpha.1/src/lib.rs"
+          ]
+        },
+        {
+          "package": "instrument-runtime",
+          "sha256": "f18d3f575f961a87108e96c759799c8e6bc3bc327e46bc609af22f638fd2468e",
+          "productionDependencies": [
+            "instrument-api",
+            "tokio"
+          ],
+          "members": [
+            "instrument-runtime-0.2.0-alpha.1/Cargo.lock",
+            "instrument-runtime-0.2.0-alpha.1/Cargo.toml",
+            "instrument-runtime-0.2.0-alpha.1/Cargo.toml.orig",
+            "instrument-runtime-0.2.0-alpha.1/src/asynchronous/native.rs",
+            "instrument-runtime-0.2.0-alpha.1/src/asynchronous/worker.rs",
+            "instrument-runtime-0.2.0-alpha.1/src/asynchronous.rs",
+            "instrument-runtime-0.2.0-alpha.1/src/lib.rs"
+          ]
+        },
+        {
+          "package": "instrument-scpi",
+          "sha256": "da86c57874ce56f546055317670898d963fbb6cfd390a53a8c39f05574adb2bb",
+          "productionDependencies": [
+            "instrument-api"
+          ],
+          "members": [
+            "instrument-scpi-0.2.0-alpha.1/Cargo.lock",
+            "instrument-scpi-0.2.0-alpha.1/Cargo.toml",
+            "instrument-scpi-0.2.0-alpha.1/Cargo.toml.orig",
+            "instrument-scpi-0.2.0-alpha.1/src/asynchronous.rs",
+            "instrument-scpi-0.2.0-alpha.1/src/lib.rs",
+            "instrument-scpi-0.2.0-alpha.1/src/profile.rs"
+          ]
+        },
+        {
+          "package": "instrument-testkit",
+          "sha256": "ac7fd54b7cdad8aa70a1c5da496857484badf73ca73d1abf40c708cdd6d52fe0",
+          "productionDependencies": [
+            "instrument-api",
+            "instrument-scpi"
+          ],
+          "members": [
+            "instrument-testkit-0.2.0-alpha.1/Cargo.lock",
+            "instrument-testkit-0.2.0-alpha.1/Cargo.toml",
+            "instrument-testkit-0.2.0-alpha.1/Cargo.toml.orig",
+            "instrument-testkit-0.2.0-alpha.1/src/lib.rs"
+          ]
+        },
+        {
+          "package": "instrument-components",
+          "sha256": "34784a8e991f9183c8570fd7740510717716b7ddd1514384ced7a907513235c5",
+          "productionDependencies": [
+            "instrument-api",
+            "instrument-runtime"
+          ],
+          "members": [
+            "instrument-components-0.2.0-alpha.1/Cargo.lock",
+            "instrument-components-0.2.0-alpha.1/Cargo.toml",
+            "instrument-components-0.2.0-alpha.1/Cargo.toml.orig",
+            "instrument-components-0.2.0-alpha.1/README.md",
+            "instrument-components-0.2.0-alpha.1/src/catalog.rs",
+            "instrument-components-0.2.0-alpha.1/src/lib.rs"
+          ]
+        },
+        {
+          "package": "InstrumentComponents",
+          "sha256": "2a680f925c6786cb30ec5b11890958ee6d84837da73ec6706a120d8f44eea4f8",
+          "productionDependencies": {
+            "InstrumentComponents.Runtime": "[0.2.0-alpha.1]"
+          },
+          "members": [
+            "_rels/.rels",
+            "InstrumentComponents.nuspec",
+            "README.md",
+            "lib/net8.0/InstrumentComponents.dll",
+            "lib/net8.0/InstrumentComponents.xml",
+            "[Content_Types].xml",
+            "package/services/metadata/core-properties/nuget.psmdcp"
+          ]
+        },
+        {
+          "package": "InstrumentComponents.Abstractions",
+          "sha256": "4842416d7552e3fe94cb3c3a67e8fb6ab757da7a4ccbcf764089fca1df158963",
+          "productionDependencies": {},
+          "members": [
+            "_rels/.rels",
+            "InstrumentComponents.Abstractions.nuspec",
+            "README.md",
+            "lib/net8.0/InstrumentComponents.Abstractions.dll",
+            "[Content_Types].xml",
+            "package/services/metadata/core-properties/nuget.psmdcp"
+          ]
+        },
+        {
+          "package": "InstrumentComponents.Runtime",
+          "sha256": "7f28f0f0725de127917f7b5d53fa9d827e5b1e0cad76a794c96806016065c7b9",
+          "productionDependencies": {
+            "InstrumentComponents.Abstractions": "[0.2.0-alpha.1]"
+          },
+          "members": [
+            "_rels/.rels",
+            "InstrumentComponents.Runtime.nuspec",
+            "README.md",
+            "lib/net8.0/InstrumentComponents.Runtime.dll",
+            "[Content_Types].xml",
+            "package/services/metadata/core-properties/nuget.psmdcp"
+          ]
+        },
+        {
+          "package": "InstrumentComponents.Scpi",
+          "sha256": "fe8ef4056397bcb9c0a049c43cfa83c817f6aa03367bb39808d7debfd1da4337",
+          "productionDependencies": {
+            "InstrumentComponents.Abstractions": "[0.2.0-alpha.1]"
+          },
+          "members": [
+            "_rels/.rels",
+            "InstrumentComponents.Scpi.nuspec",
+            "README.md",
+            "lib/net8.0/InstrumentComponents.Scpi.dll",
+            "[Content_Types].xml",
+            "package/services/metadata/core-properties/nuget.psmdcp"
+          ]
+        },
+        {
+          "package": "InstrumentComponents.TestKit",
+          "sha256": "a390c5debfd82e772ee163aab0336d1a5dd7ededf2c8c930c520fd3df4999251",
+          "productionDependencies": {
+            "InstrumentComponents.Scpi": "[0.2.0-alpha.1]"
+          },
+          "members": [
+            "_rels/.rels",
+            "InstrumentComponents.TestKit.nuspec",
+            "README.md",
+            "lib/net8.0/InstrumentComponents.TestKit.dll",
+            "[Content_Types].xml",
+            "package/services/metadata/core-properties/nuget.psmdcp"
+          ]
+        }
+      ]
+    },
+    {
+      "artifact": {
+        "id": 14071501634,
+        "name": "driver-sdk-ubuntu-latest-net8.0",
+        "digest": "sha256:f989f4fb77a49164cf5fe763cd3720f3bd0219ae0685772a009e4f9b961c8d25",
+        "size_in_bytes": 12215781
+      },
+      "verifiedZipSha256": "f989f4fb77a49164cf5fe763cd3720f3bd0219ae0685772a009e4f9b961c8d25",
+      "platform": {
+        "rid": "linux-x64",
+        "framework": "net8.0",
+        "nativeExecuted": true,
+        "isolationExecuted": true,
+        "binary": "/home/runner/work/_temp/sdk-net8.0/native/AotConsumer",
+        "sha256": "045dedc490d615db79ba67ec08c92f578f9183e4e5ff8f274c54f877cff19bc6"
+      },
+      "nativeFormatVerified": true,
+      "phaseCount": 47,
+      "packages": [
+        {
+          "package": "instrument-api",
+          "sha256": "17dd560ec49c711d5f06e4583541ad0b1419261cc1a78a93224ba8f9e89aa3b9",
+          "productionDependencies": [],
+          "members": [
+            "instrument-api-0.2.0-alpha.1/Cargo.lock",
+            "instrument-api-0.2.0-alpha.1/Cargo.toml",
+            "instrument-api-0.2.0-alpha.1/Cargo.toml.orig",
+            "instrument-api-0.2.0-alpha.1/src/asynchronous.rs",
+            "instrument-api-0.2.0-alpha.1/src/catalog.rs",
+            "instrument-api-0.2.0-alpha.1/src/catalog_generated.rs",
+            "instrument-api-0.2.0-alpha.1/src/lib.rs"
+          ]
+        },
+        {
+          "package": "instrument-runtime",
+          "sha256": "b70d7424ce8cc8ddf903a1b1f070e125989265fac718d3a42a51ad7632c2c57a",
+          "productionDependencies": [
+            "instrument-api",
+            "tokio"
+          ],
+          "members": [
+            "instrument-runtime-0.2.0-alpha.1/Cargo.lock",
+            "instrument-runtime-0.2.0-alpha.1/Cargo.toml",
+            "instrument-runtime-0.2.0-alpha.1/Cargo.toml.orig",
+            "instrument-runtime-0.2.0-alpha.1/src/asynchronous/native.rs",
+            "instrument-runtime-0.2.0-alpha.1/src/asynchronous/worker.rs",
+            "instrument-runtime-0.2.0-alpha.1/src/asynchronous.rs",
+            "instrument-runtime-0.2.0-alpha.1/src/lib.rs"
+          ]
+        },
+        {
+          "package": "instrument-scpi",
+          "sha256": "2821a21ec2178e3d4fe911911828e50b27081110fa2a89f97ba420f8745697fb",
+          "productionDependencies": [
+            "instrument-api"
+          ],
+          "members": [
+            "instrument-scpi-0.2.0-alpha.1/Cargo.lock",
+            "instrument-scpi-0.2.0-alpha.1/Cargo.toml",
+            "instrument-scpi-0.2.0-alpha.1/Cargo.toml.orig",
+            "instrument-scpi-0.2.0-alpha.1/src/asynchronous.rs",
+            "instrument-scpi-0.2.0-alpha.1/src/lib.rs",
+            "instrument-scpi-0.2.0-alpha.1/src/profile.rs"
+          ]
+        },
+        {
+          "package": "instrument-testkit",
+          "sha256": "ccb68492b606851ca34a173e3f75aa04c380ea8b378aca978fdaa29164e1a511",
+          "productionDependencies": [
+            "instrument-api",
+            "instrument-scpi"
+          ],
+          "members": [
+            "instrument-testkit-0.2.0-alpha.1/Cargo.lock",
+            "instrument-testkit-0.2.0-alpha.1/Cargo.toml",
+            "instrument-testkit-0.2.0-alpha.1/Cargo.toml.orig",
+            "instrument-testkit-0.2.0-alpha.1/src/lib.rs"
+          ]
+        },
+        {
+          "package": "instrument-components",
+          "sha256": "4ca73da408fd6e10e44715102c1b1a0339406aa177561b0e95b8326b761a7419",
+          "productionDependencies": [
+            "instrument-api",
+            "instrument-runtime"
+          ],
+          "members": [
+            "instrument-components-0.2.0-alpha.1/Cargo.lock",
+            "instrument-components-0.2.0-alpha.1/Cargo.toml",
+            "instrument-components-0.2.0-alpha.1/Cargo.toml.orig",
+            "instrument-components-0.2.0-alpha.1/README.md",
+            "instrument-components-0.2.0-alpha.1/src/catalog.rs",
+            "instrument-components-0.2.0-alpha.1/src/lib.rs"
+          ]
+        },
+        {
+          "package": "InstrumentComponents",
+          "sha256": "c556f63bd7c022d714f710ef7af365be0ecd15d7e7d8510a83cb517988c05d10",
+          "productionDependencies": {
+            "InstrumentComponents.Runtime": "[0.2.0-alpha.1]"
+          },
+          "members": [
+            "_rels/.rels",
+            "InstrumentComponents.nuspec",
+            "README.md",
+            "lib/net8.0/InstrumentComponents.dll",
+            "lib/net8.0/InstrumentComponents.xml",
+            "[Content_Types].xml",
+            "package/services/metadata/core-properties/nuget.psmdcp"
+          ]
+        },
+        {
+          "package": "InstrumentComponents.Abstractions",
+          "sha256": "e2707d5cbec1ba7fd7b5383a04dcb70f6d759346333faf3993cd8af25838a9a0",
+          "productionDependencies": {},
+          "members": [
+            "_rels/.rels",
+            "InstrumentComponents.Abstractions.nuspec",
+            "README.md",
+            "lib/net8.0/InstrumentComponents.Abstractions.dll",
+            "[Content_Types].xml",
+            "package/services/metadata/core-properties/nuget.psmdcp"
+          ]
+        },
+        {
+          "package": "InstrumentComponents.Runtime",
+          "sha256": "4186ded2583d9b97132f43490c47f909b8bfc82a42519fa7812e9f91082de24f",
+          "productionDependencies": {
+            "InstrumentComponents.Abstractions": "[0.2.0-alpha.1]"
+          },
+          "members": [
+            "_rels/.rels",
+            "InstrumentComponents.Runtime.nuspec",
+            "README.md",
+            "lib/net8.0/InstrumentComponents.Runtime.dll",
+            "[Content_Types].xml",
+            "package/services/metadata/core-properties/nuget.psmdcp"
+          ]
+        },
+        {
+          "package": "InstrumentComponents.Scpi",
+          "sha256": "321c27bb2efec3f24432c66adf03d5febdbc43f8a9b3284fe4c170c3c48e6c52",
+          "productionDependencies": {
+            "InstrumentComponents.Abstractions": "[0.2.0-alpha.1]"
+          },
+          "members": [
+            "_rels/.rels",
+            "InstrumentComponents.Scpi.nuspec",
+            "README.md",
+            "lib/net8.0/InstrumentComponents.Scpi.dll",
+            "[Content_Types].xml",
+            "package/services/metadata/core-properties/nuget.psmdcp"
+          ]
+        },
+        {
+          "package": "InstrumentComponents.TestKit",
+          "sha256": "e32c859388742d532a886beef60c91678dc86e37850cbbb9c7fec19860aa9c20",
+          "productionDependencies": {
+            "InstrumentComponents.Scpi": "[0.2.0-alpha.1]"
+          },
+          "members": [
+            "_rels/.rels",
+            "InstrumentComponents.TestKit.nuspec",
+            "README.md",
+            "lib/net8.0/InstrumentComponents.TestKit.dll",
+            "[Content_Types].xml",
+            "package/services/metadata/core-properties/nuget.psmdcp"
+          ]
+        }
+      ]
+    },
+    {
+      "artifact": {
+        "id": 14070288911,
+        "name": "driver-sdk-ubuntu-latest-net10.0",
+        "digest": "sha256:bd4e36b9df4b892659a2017149733eeb02a38e22b3d91c95201c40c7fad411de",
+        "size_in_bytes": 11394824
+      },
+      "verifiedZipSha256": "bd4e36b9df4b892659a2017149733eeb02a38e22b3d91c95201c40c7fad411de",
+      "platform": {
+        "rid": "linux-x64",
+        "framework": "net10.0",
+        "nativeExecuted": true,
+        "isolationExecuted": true,
+        "binary": "/home/runner/work/_temp/sdk-net10.0/native/AotConsumer",
+        "sha256": "42b5e2066d2e0ad40465dfe2bab64d72e346bda31bd9191e131374fba4e5c59f"
+      },
+      "nativeFormatVerified": true,
+      "phaseCount": 47,
+      "packages": [
+        {
+          "package": "instrument-api",
+          "sha256": "17dd560ec49c711d5f06e4583541ad0b1419261cc1a78a93224ba8f9e89aa3b9",
+          "productionDependencies": [],
+          "members": [
+            "instrument-api-0.2.0-alpha.1/Cargo.lock",
+            "instrument-api-0.2.0-alpha.1/Cargo.toml",
+            "instrument-api-0.2.0-alpha.1/Cargo.toml.orig",
+            "instrument-api-0.2.0-alpha.1/src/asynchronous.rs",
+            "instrument-api-0.2.0-alpha.1/src/catalog.rs",
+            "instrument-api-0.2.0-alpha.1/src/catalog_generated.rs",
+            "instrument-api-0.2.0-alpha.1/src/lib.rs"
+          ]
+        },
+        {
+          "package": "instrument-runtime",
+          "sha256": "b70d7424ce8cc8ddf903a1b1f070e125989265fac718d3a42a51ad7632c2c57a",
+          "productionDependencies": [
+            "instrument-api",
+            "tokio"
+          ],
+          "members": [
+            "instrument-runtime-0.2.0-alpha.1/Cargo.lock",
+            "instrument-runtime-0.2.0-alpha.1/Cargo.toml",
+            "instrument-runtime-0.2.0-alpha.1/Cargo.toml.orig",
+            "instrument-runtime-0.2.0-alpha.1/src/asynchronous/native.rs",
+            "instrument-runtime-0.2.0-alpha.1/src/asynchronous/worker.rs",
+            "instrument-runtime-0.2.0-alpha.1/src/asynchronous.rs",
+            "instrument-runtime-0.2.0-alpha.1/src/lib.rs"
+          ]
+        },
+        {
+          "package": "instrument-scpi",
+          "sha256": "2821a21ec2178e3d4fe911911828e50b27081110fa2a89f97ba420f8745697fb",
+          "productionDependencies": [
+            "instrument-api"
+          ],
+          "members": [
+            "instrument-scpi-0.2.0-alpha.1/Cargo.lock",
+            "instrument-scpi-0.2.0-alpha.1/Cargo.toml",
+            "instrument-scpi-0.2.0-alpha.1/Cargo.toml.orig",
+            "instrument-scpi-0.2.0-alpha.1/src/asynchronous.rs",
+            "instrument-scpi-0.2.0-alpha.1/src/lib.rs",
+            "instrument-scpi-0.2.0-alpha.1/src/profile.rs"
+          ]
+        },
+        {
+          "package": "instrument-testkit",
+          "sha256": "ccb68492b606851ca34a173e3f75aa04c380ea8b378aca978fdaa29164e1a511",
+          "productionDependencies": [
+            "instrument-api",
+            "instrument-scpi"
+          ],
+          "members": [
+            "instrument-testkit-0.2.0-alpha.1/Cargo.lock",
+            "instrument-testkit-0.2.0-alpha.1/Cargo.toml",
+            "instrument-testkit-0.2.0-alpha.1/Cargo.toml.orig",
+            "instrument-testkit-0.2.0-alpha.1/src/lib.rs"
+          ]
+        },
+        {
+          "package": "instrument-components",
+          "sha256": "4ca73da408fd6e10e44715102c1b1a0339406aa177561b0e95b8326b761a7419",
+          "productionDependencies": [
+            "instrument-api",
+            "instrument-runtime"
+          ],
+          "members": [
+            "instrument-components-0.2.0-alpha.1/Cargo.lock",
+            "instrument-components-0.2.0-alpha.1/Cargo.toml",
+            "instrument-components-0.2.0-alpha.1/Cargo.toml.orig",
+            "instrument-components-0.2.0-alpha.1/README.md",
+            "instrument-components-0.2.0-alpha.1/src/catalog.rs",
+            "instrument-components-0.2.0-alpha.1/src/lib.rs"
+          ]
+        },
+        {
+          "package": "InstrumentComponents",
+          "sha256": "86fa34cb071b0610d8d892e7c4b7010c2c609a3589f24101b0fa3f5d9f4b6059",
+          "productionDependencies": {
+            "InstrumentComponents.Runtime": "[0.2.0-alpha.1]"
+          },
+          "members": [
+            "_rels/.rels",
+            "InstrumentComponents.nuspec",
+            "README.md",
+            "lib/net8.0/InstrumentComponents.dll",
+            "lib/net8.0/InstrumentComponents.xml",
+            "[Content_Types].xml",
+            "package/services/metadata/core-properties/nuget.psmdcp"
+          ]
+        },
+        {
+          "package": "InstrumentComponents.Abstractions",
+          "sha256": "1faab4c1cbc881c3f0936be70130b353fe3666e33297754d0d8b932598786ebc",
+          "productionDependencies": {},
+          "members": [
+            "_rels/.rels",
+            "InstrumentComponents.Abstractions.nuspec",
+            "README.md",
+            "lib/net8.0/InstrumentComponents.Abstractions.dll",
+            "[Content_Types].xml",
+            "package/services/metadata/core-properties/nuget.psmdcp"
+          ]
+        },
+        {
+          "package": "InstrumentComponents.Runtime",
+          "sha256": "1b0b2b897726f035b14e82723395c10fc217060b9783c201008f3a241dba8508",
+          "productionDependencies": {
+            "InstrumentComponents.Abstractions": "[0.2.0-alpha.1]"
+          },
+          "members": [
+            "_rels/.rels",
+            "InstrumentComponents.Runtime.nuspec",
+            "README.md",
+            "lib/net8.0/InstrumentComponents.Runtime.dll",
+            "[Content_Types].xml",
+            "package/services/metadata/core-properties/nuget.psmdcp"
+          ]
+        },
+        {
+          "package": "InstrumentComponents.Scpi",
+          "sha256": "4361c5fde66f10c339f689c997de66316ae2984a365dd0a5251dd2fa070da8a8",
+          "productionDependencies": {
+            "InstrumentComponents.Abstractions": "[0.2.0-alpha.1]"
+          },
+          "members": [
+            "_rels/.rels",
+            "InstrumentComponents.Scpi.nuspec",
+            "README.md",
+            "lib/net8.0/InstrumentComponents.Scpi.dll",
+            "[Content_Types].xml",
+            "package/services/metadata/core-properties/nuget.psmdcp"
+          ]
+        },
+        {
+          "package": "InstrumentComponents.TestKit",
+          "sha256": "bb37d09c975db648c0ce7a5ffdb05a7c131b2d4156e42bed88d909f705c2b0df",
+          "productionDependencies": {
+            "InstrumentComponents.Scpi": "[0.2.0-alpha.1]"
+          },
+          "members": [
+            "_rels/.rels",
+            "InstrumentComponents.TestKit.nuspec",
+            "README.md",
+            "lib/net8.0/InstrumentComponents.TestKit.dll",
+            "[Content_Types].xml",
+            "package/services/metadata/core-properties/nuget.psmdcp"
+          ]
+        }
+      ]
+    },
+    {
+      "artifact": {
+        "id": 14070149491,
+        "name": "driver-sdk-windows-latest-net10.0",
+        "digest": "sha256:637b4e591caa8737c0c0d285c3d85bb3a1a4d26103337d0bc778d1b6c5a0e71b",
+        "size_in_bytes": 11864468
+      },
+      "verifiedZipSha256": "637b4e591caa8737c0c0d285c3d85bb3a1a4d26103337d0bc778d1b6c5a0e71b",
+      "platform": {
+        "rid": "win-x64",
+        "framework": "net10.0",
+        "nativeExecuted": true,
+        "isolationExecuted": false,
+        "binary": "D:\\a\\_temp\\sdk-net10.0\\native\\AotConsumer.exe",
+        "sha256": "dab9be2520403d6f049250edadacc2dee8a7ea4e8b6cb9596ef6dcc10972871e"
+      },
+      "nativeFormatVerified": true,
+      "phaseCount": 45,
+      "packages": [
+        {
+          "package": "instrument-api",
+          "sha256": "0a15df0420cfd621a62210442bffd2934105158adbb804a032d31070861125f7",
+          "productionDependencies": [],
+          "members": [
+            "instrument-api-0.2.0-alpha.1/Cargo.lock",
+            "instrument-api-0.2.0-alpha.1/Cargo.toml",
+            "instrument-api-0.2.0-alpha.1/Cargo.toml.orig",
+            "instrument-api-0.2.0-alpha.1/src/asynchronous.rs",
+            "instrument-api-0.2.0-alpha.1/src/catalog.rs",
+            "instrument-api-0.2.0-alpha.1/src/catalog_generated.rs",
+            "instrument-api-0.2.0-alpha.1/src/lib.rs"
+          ]
+        },
+        {
+          "package": "instrument-runtime",
+          "sha256": "f18d3f575f961a87108e96c759799c8e6bc3bc327e46bc609af22f638fd2468e",
+          "productionDependencies": [
+            "instrument-api",
+            "tokio"
+          ],
+          "members": [
+            "instrument-runtime-0.2.0-alpha.1/Cargo.lock",
+            "instrument-runtime-0.2.0-alpha.1/Cargo.toml",
+            "instrument-runtime-0.2.0-alpha.1/Cargo.toml.orig",
+            "instrument-runtime-0.2.0-alpha.1/src/asynchronous/native.rs",
+            "instrument-runtime-0.2.0-alpha.1/src/asynchronous/worker.rs",
+            "instrument-runtime-0.2.0-alpha.1/src/asynchronous.rs",
+            "instrument-runtime-0.2.0-alpha.1/src/lib.rs"
+          ]
+        },
+        {
+          "package": "instrument-scpi",
+          "sha256": "da86c57874ce56f546055317670898d963fbb6cfd390a53a8c39f05574adb2bb",
+          "productionDependencies": [
+            "instrument-api"
+          ],
+          "members": [
+            "instrument-scpi-0.2.0-alpha.1/Cargo.lock",
+            "instrument-scpi-0.2.0-alpha.1/Cargo.toml",
+            "instrument-scpi-0.2.0-alpha.1/Cargo.toml.orig",
+            "instrument-scpi-0.2.0-alpha.1/src/asynchronous.rs",
+            "instrument-scpi-0.2.0-alpha.1/src/lib.rs",
+            "instrument-scpi-0.2.0-alpha.1/src/profile.rs"
+          ]
+        },
+        {
+          "package": "instrument-testkit",
+          "sha256": "ac7fd54b7cdad8aa70a1c5da496857484badf73ca73d1abf40c708cdd6d52fe0",
+          "productionDependencies": [
+            "instrument-api",
+            "instrument-scpi"
+          ],
+          "members": [
+            "instrument-testkit-0.2.0-alpha.1/Cargo.lock",
+            "instrument-testkit-0.2.0-alpha.1/Cargo.toml",
+            "instrument-testkit-0.2.0-alpha.1/Cargo.toml.orig",
+            "instrument-testkit-0.2.0-alpha.1/src/lib.rs"
+          ]
+        },
+        {
+          "package": "instrument-components",
+          "sha256": "34784a8e991f9183c8570fd7740510717716b7ddd1514384ced7a907513235c5",
+          "productionDependencies": [
+            "instrument-api",
+            "instrument-runtime"
+          ],
+          "members": [
+            "instrument-components-0.2.0-alpha.1/Cargo.lock",
+            "instrument-components-0.2.0-alpha.1/Cargo.toml",
+            "instrument-components-0.2.0-alpha.1/Cargo.toml.orig",
+            "instrument-components-0.2.0-alpha.1/README.md",
+            "instrument-components-0.2.0-alpha.1/src/catalog.rs",
+            "instrument-components-0.2.0-alpha.1/src/lib.rs"
+          ]
+        },
+        {
+          "package": "InstrumentComponents",
+          "sha256": "6b21c88d275a83f9ffe659a64005d379244fd033e215194d7e50010097a86b7b",
+          "productionDependencies": {
+            "InstrumentComponents.Runtime": "[0.2.0-alpha.1]"
+          },
+          "members": [
+            "_rels/.rels",
+            "InstrumentComponents.nuspec",
+            "README.md",
+            "lib/net8.0/InstrumentComponents.dll",
+            "lib/net8.0/InstrumentComponents.xml",
+            "[Content_Types].xml",
+            "package/services/metadata/core-properties/nuget.psmdcp"
+          ]
+        },
+        {
+          "package": "InstrumentComponents.Abstractions",
+          "sha256": "027bacdbec889e4cfee46d9792c2629a99b8c3356ae4c91eb6c177833a972f30",
+          "productionDependencies": {},
+          "members": [
+            "_rels/.rels",
+            "InstrumentComponents.Abstractions.nuspec",
+            "README.md",
+            "lib/net8.0/InstrumentComponents.Abstractions.dll",
+            "[Content_Types].xml",
+            "package/services/metadata/core-properties/nuget.psmdcp"
+          ]
+        },
+        {
+          "package": "InstrumentComponents.Runtime",
+          "sha256": "a5c2101c6040433d48bac7fa8cc715d889405d688c471e65aefa29afa7e59538",
+          "productionDependencies": {
+            "InstrumentComponents.Abstractions": "[0.2.0-alpha.1]"
+          },
+          "members": [
+            "_rels/.rels",
+            "InstrumentComponents.Runtime.nuspec",
+            "README.md",
+            "lib/net8.0/InstrumentComponents.Runtime.dll",
+            "[Content_Types].xml",
+            "package/services/metadata/core-properties/nuget.psmdcp"
+          ]
+        },
+        {
+          "package": "InstrumentComponents.Scpi",
+          "sha256": "d38afb4ae64369b17d6089aedcae7a9ee307d11e351ca2140eb2a0760a050cf5",
+          "productionDependencies": {
+            "InstrumentComponents.Abstractions": "[0.2.0-alpha.1]"
+          },
+          "members": [
+            "_rels/.rels",
+            "InstrumentComponents.Scpi.nuspec",
+            "README.md",
+            "lib/net8.0/InstrumentComponents.Scpi.dll",
+            "[Content_Types].xml",
+            "package/services/metadata/core-properties/nuget.psmdcp"
+          ]
+        },
+        {
+          "package": "InstrumentComponents.TestKit",
+          "sha256": "68805210b770102be9d22102835b61120b13441836cc3f5e10e6c29933e7f27b",
+          "productionDependencies": {
+            "InstrumentComponents.Scpi": "[0.2.0-alpha.1]"
+          },
+          "members": [
+            "_rels/.rels",
+            "InstrumentComponents.TestKit.nuspec",
+            "README.md",
+            "lib/net8.0/InstrumentComponents.TestKit.dll",
+            "[Content_Types].xml",
+            "package/services/metadata/core-properties/nuget.psmdcp"
+          ]
+        }
+      ]
+    }
+  ]
+}
