@@ -1,0 +1,7 @@
+# TDS1002 software qualification record
+
+Hosted run: https://github.com/josh-hemphill/instrument-components-tektronix/actions/runs/43494908168 at f71ca340406370cc2467f78b604cc435752cadd8. All9jobs passed. The workflow definition, SDK checkout and bootstrap/tool pins use1243881c6b91c46ff40cf0cb3cfd4598b8352409.
+
+Actual four SDK plus four device ZIPs were downloaded with the GitHub connector and independently audited. Every ZIP digest, phase exit/log hash, x64 PE/ELF native binary hash/CLR absence, production archive source/dependency/member boundary and twelve-entry SDK feed/consumer checksum join passed. Each Windows/Linux x64 net8/net10 device cell executes both source/generated and packed C# Native AOT binaries, Rust default/async and all452cases plus concrete admission/probe/health/lifetime/pending-IO procedures and compiled examples. The intentional IL2026+IL3050 diagnostic probe fails as designed; regular native publications contain no unexpected IL warnings.
+
+Local source-r5 logs used explicit project/path SDK references and are not package/public proof. Hosted ZIPs establish checksummed development-feed/native proof; publicalpha.1 lacks this factory. Primary manuals, exact own-model/module/probe scope and independent synthetic oracle provenance are separate from physical evidence. No hardware validation, publication, merge or OpenTAP AOT is inferred. The earlier C#Scalar/Numeric compile finding is corrected in f71 and all affected paths execute successfully. Final full9-item implementation Council review is separate.

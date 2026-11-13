@@ -1,0 +1,7 @@
+    Checking instrument-api v0.2.0-alpha.1 (/workspace/instrument-components/crates/instrument-api)
+    Checking instrument-scpi v0.2.0-alpha.1 (/workspace/instrument-components/crates/instrument-scpi)
+    Checking instrument-runtime v0.2.0-alpha.1 (/workspace/instrument-components/crates/instrument-runtime)
+    Checking instrument-testkit v0.2.0-alpha.1 (/workspace/instrument-components/crates/instrument-testkit)
+    Checking instrument-driver-tektronix v0.2.0-alpha.1 (/workspace/scratch/instrument-components-expansion-20261113/tek-source-r5)
+    Checking tektronix-package-proof v0.0.0 (/workspace/scratch/instrument-components-expansion-20261113/tek-source-r5/validation/rust)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 2.03s
