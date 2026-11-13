@@ -1,0 +1,70 @@
+{
+  "stage": "EARLY IMPLEMENTATION SOURCE INSPECTION",
+  "rubric": "v2",
+  "coreSource": "1243881c6b91c46ff40cf0cb3cfd4598b8352409",
+  "keysightSource": "ac1d71a9fba87be2a1cd2bcc16c6b1888c0f0f13",
+  "scope": "New TDS1002 source against passed full9 v2 spec. No final numeric implementation grade yet; procedural/native/package proof still underway. Existing118 Tek cases preserved and334 separately authored added=452.",
+  "specGate": "/workspace/scratch/instrument-components-expansion-20261113/council/full-spec-v2-r1/manifest.json",
+  "files": [
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/council/tds-source-r1/RUBRIC-v2.md",
+      "sha256": "11c08c58293ec2f4543a689f2f24817ca41f514812cabba75ca89f46c9c41ed5"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/council/tds-source-r1/cases.json",
+      "sha256": "8575561c3865a7bad162f6838e83dbb61a101cadd6a0457263b20f35d67e9350"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/council/tds-source-r1/dotnet/InstrumentComponents.Drivers.Tektronix/MessageBackend.cs",
+      "sha256": "a3dcef5308cf701d5d038c4e1d581c14d590e9bba91ac0deba737e0d368b0473"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/council/tds-source-r1/dotnet/InstrumentComponents.Drivers.Tektronix/Tds1002.cs",
+      "sha256": "9be4dfab089d61da6f3aac41af8271639ab7ac50bbafba429054d2c3466d6af5"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/council/tds-source-r1/generated/GeneratedCases.cs",
+      "sha256": "c14ffb8fa9b15a9918bf49be3b5c2db5e7493a489f478b938021e769c545f7a0"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/council/tds-source-r1/generated/cases.rs",
+      "sha256": "6e323b857b39dd8415dd9d36068ba535a805710ed256e9417ccfb5cf6f57200c"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/council/tds-source-r1/provenance/tds1002-manual-sources.json",
+      "sha256": "7e1bbe5c5c540e4fe4258dba5143cc7d97822ecdb746fa83c20fe1c7a5804053"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/council/tds-source-r1/spec/acceptance/tds1002.catalog-cases.json",
+      "sha256": "7d715c1416e65ffe60ae273732985f090cb569a23fa24be4ee8f91f535491393"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/council/tds-source-r1/spec/acceptance/tds1002.provenance.json",
+      "sha256": "63be0ee7fdfca734d2ac31c5a28b558860d4506a403b5d5ab778a406f447d308"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/council/tds-source-r1/spec/models/TDS1002-COMPOSITION.md",
+      "sha256": "1b1cffe2e59c810ce7cc049a4bd579adbcf65718017a51df575d674e92ba904f"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/council/tds-source-r1/spec/models/TDS1002-EXAMPLES.md",
+      "sha256": "82f879dc7625aa524fdaded09eea2c513b8c512346624d40baeb4d6b6d70d223"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/council/tds-source-r1/spec/models/TDS1002.md",
+      "sha256": "ad1258bac027c6628d47ef8db492acb5b83879f9b2eece12e076aaacaffc2926"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/council/tds-source-r1/src/lib.rs",
+      "sha256": "d06c255479e0d17d0695de8eb775437a082041d00d79f60ad2b90e2be3111f88"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/council/tds-source-r1/src/message_backend.rs",
+      "sha256": "b58c35275e608ef81a713d313296e00d3b0fb38519f63d1888771c90f4b2b2df"
+    },
+    {
+      "path": "/workspace/scratch/instrument-components-expansion-20261113/council/tds-source-r1/src/tds1002.rs",
+      "sha256": "1dbfa52777e92a1f3d78a4b31e0f4ec6d8fd228944f99508c1782cb25af75848"
+    }
+  ]
+}
