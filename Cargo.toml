@@ -5,7 +5,7 @@ edition = "2021"
 license = "MIT OR Apache-2.0"
 description = "Source-derived Tektronix device profiles; hardware validation pending"
 repository = "https://github.com/josh-hemphill/instrument-components-tektronix"
-include = ["src/**", "generated/profiles.rs", "LICENSE-*", "README.md"]
+include = ["src/**", "generated/profiles.rs", "/LICENSE-*", "/README.md"]
 [dependencies]
 instrument-api = "=0.3.0-alpha.1"
 instrument-scpi = "=0.3.0-alpha.1"
