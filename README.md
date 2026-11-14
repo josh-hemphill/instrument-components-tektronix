@@ -1,17 +1,17 @@
 # Instrument Components Tektronix drivers
 
 Independently packaged Rust (`instrument-driver-tektronix`) and .NET (`InstrumentComponents.Drivers.Tektronix`)
-source-derived profiles, version `0.2.0-alpha.1`. These are published previews;
+source-derived profiles, coordinated release target `0.3.0-alpha.1`. Check registries and the matching release for availability;
 no devices in this library have physical bench validation yet.
 
 ## Install and try the preview
 
 ```sh
-cargo add instrument-driver-tektronix@=0.2.0-alpha.1
-dotnet add package InstrumentComponents.Drivers.Tektronix --version 0.2.0-alpha.1
+cargo add instrument-driver-tektronix@=0.3.0-alpha.1
+dotnet add package InstrumentComponents.Drivers.Tektronix --version "[0.3.0-alpha.1]"
 ```
 
-Use the [complete hardware-free Rust/C# guide](https://github.com/josh-hemphill/instrument-components/blob/72015932f9b168ac7d182fcb5ca7a367318505b8/docs-site/docs/getting-started.md) before connecting equipment. It uses exact public package versions and an in-memory development connector. Select this family's factories explicitly; adding a package never probes or opens hardware. The [published source tag](https://github.com/josh-hemphill/instrument-components-tektronix/tree/driver-v0.2.0-alpha.1) contains this release; the default branch remains a scaffold until its implementation PR is merged.
+Use the [complete hardware-free Rust/C# guide](https://github.com/josh-hemphill/instrument-components/blob/v0.3.0-alpha.1/docs-site/docs/getting-started.md) before connecting equipment. It uses exact public package versions and an in-memory development connector. Select this family's factories explicitly; adding a package never probes or opens hardware. The [release source tag](https://github.com/josh-hemphill/instrument-components-tektronix/tree/driver-v0.3.0-alpha.1) selects the coordinated release once published; the latest branch contains ongoing development.
 
 
 Models and aliases are passive hints carried forward from main commit
@@ -53,7 +53,7 @@ plans. Generated Rust/C# files contain static data and require no runtime JSON.
 `provenance/source/` is historical audit evidence, excluded from production
 packages. The SDK TestKit and Tokio consumers are development-only dependencies.
 
-The public 0.2.0-alpha.1 SDK and driver packages are available on crates.io and NuGet. The release workflow tests fresh public-package consumers on Linux/Windows x64 and .NET 8/10.
+The previous 0.2.0-alpha.1 SDK and driver packages are available on crates.io and NuGet. The release workflow tests fresh public-package consumers on Linux/Windows x64 and .NET 8/10.
 
 For pre-publication development, CI also uses checksummed release-form SDK archives from
 a pinned main workflow. The consumer job checks out only this repository and
@@ -74,9 +74,9 @@ Use a `ConnectionBinding` containing the canonical driver ID, exact endpoint and
 The committed exact wire cases now execute through endpoint bindings, including sparse channel IDs, per-operation transport failures and closed-handle checks. Source evidence remains distinct from physical evidence. All model hints in this repository are in initial scope; physical validation is pending.
 
 
-## TDS1002 scalar backend (unreleased)
+## TDS1002 scalar subset in the 0.3 release target
 
-The exact confirmed model is **TDS1002**, without A/B. This branch adds an explicit manual-derived scalar backend, absent from public0.2.0-alpha.1. All hardware validation remains pending. A coordinated future package version and passing distribution/Council review are required before release; do not assume the published preview includes this factory.
+The exact confirmed model is **TDS1002**, without A/B. The coordinated **0.3.0-alpha.1** target includes its explicit manual-derived scalar backend. The historical 0.2 distribution excludes this factory. Hardware validation remains pending. Current package execution and Council distribution review gate publication; check the matching release for public availability.
 
 Register Rust `tds1002::Factory` / C# `Tds1002Factory` explicitly, with exact endpoint bindings and frozen module/probe/commissioning configuration. Each selected endpoint has its own probe factors. A documented **TDS2CM, TDS2CMA or TDS2CMAX** module is required for this GPIB subset. **TDS2MEM does not supply GPIB**. No direct USB/B-model adapter assumption or automatic interface discovery is made. Manufacturer TEKTRONIX and exact models TDS1002/TDS 1002 are passive matches; A/B aliases never match.
 
@@ -93,3 +93,7 @@ Use a complete-message plain-text connector with LF/EOI framing,256-byte bounded
 The [specification](spec/models/TDS1002.md) defines every command/range/parser/state change. Executed [Rust](validation/rust/src/tds_examples.rs) and [C#](validation/dotnet/TdsExamples.cs) composition examples separate synthetic TestKit setup from application construction and typed calls. Read the [procedural coverage map](validation/tds1002-procedural-coverage.md) and independent oracle/provenance before bench testing. All118 earlier cases are preserved and334 independently extracted TDS cases are added:452 active cases.
 
 An uncertain IO/parse/Device failure or active cancellation quarantines the whole handle. Cancellation may leave an acquisition running; resynchronize/recommission externally and reopen. There is no implicit STOP/clear/reset/retry or mode restoration. Close releases owned resources once, preserves borrowed resources and never claims device shutdown. Source/packed Native AOT evidence is software conformance, separate from hardware evidence and from OpenTAP host compatibility.
+
+## Coordinated 0.3 release
+
+The 0.3.0-alpha.1 distribution includes the current merged software implementation and uses exact matching SDK dependencies. The 0.2 exclusions and historical proof records above describe that earlier release. New device additions remain hardware-unvalidated and require explicit commissioning/configuration. Core production packages do not bundle this driver. Release workflows run Windows/Linux x64 and .NET 8/10 package consumers; the Keysight release runs the final all-five public composition gate.
